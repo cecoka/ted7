@@ -1,0 +1,1520 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select, textarea  {
+    vertical-align:middle;
+    border: 0px solid transparent;
+}
+
+input:focus, textarea:focus  {
+    border: 0px solid transparent;
+    outline-width: 0;
+}
+
+
+/*MY CODE*/ 
+/* ===================== COLOUR CODES ===================== */
+/*
+ORANGE = #B3811A  rgba(179,129,26,1)
+BRIGHTEST BLUE = #F5F9FC  rgba(245,249,252,1)
+DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1) 
+*/
+
+
+/* ========================= GLOBAL TEXT STYLES =========================*/
+
+* {text-decoration: none;}
+
+/* === Mobile ===*/ 
+
+/* Navigation Menu */
+nav ul li a {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 11pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #111E2B;
+    padding: 0 2.5vw;   
+}
+
+/* Titles */
+.title {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 700;
+    font-size: 24pt;
+    color: #F5F9FC;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0 10px;
+}
+
+/* Sub-Titles */
+.sub-title {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16pt;
+    line-height: 28pt;
+    color: #F5F9FC;
+    background: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Body text */
+.body-text {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 14pt;
+    color: #F5F9FC;
+    text-align: justify;
+    padding: 10px 40px 16px; 
+}
+
+/* Button read more */
+.button-read-more{
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14pt; 
+    font-weight: 600;
+    color: #F5F9FC;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(29,68,112,0.75); 
+    padding: 15px 0 15px 0;
+    text-shadow: 0 0 5px #111E2B;
+}
+
+/* Project Name */
+.name {
+    display: text;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600;
+    font-size: 16pt;
+    color: #F5F9FC;
+    text-align: center;
+    padding: 5px; 
+    text-shadow: 0 0 10px #111E2B;
+}
+
+/* Project Info */
+.info {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 400;
+    font-size: 12pt;
+    text-decoration: none;
+    color: #F5F9FC;
+    background: none;
+    text-align: center;
+    padding: 5px;  
+    text-shadow: 0 0 5px #111E2B;
+}
+
+/* Blog date */
+.today{
+    display: block;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 400;
+    font-size: 14px; /*TBC*/
+    line-height: 28px;/*TBC*/
+    color: #7194BB;
+    display: block;
+    text-align: center;
+    padding: 2.5%;
+    border-top: 1px solid #B3811A;
+    border-bottom: 1px solid #B3811A;
+}
+
+/* Blog Citation */
+.cite a{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 9pt;
+    line-height: 12pt;
+    color: #7194BB;
+    text-align: center;
+    text-decoration: none;
+    margin: 5%;   
+}
+
+/* Contact Input text */
+input, textarea{
+    font-family: 'Open Sans', sans-serif; 
+    color: #111E2B;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 14pt; 
+    text-align: left;    
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(245,249,252,0.7); 
+}
+:-ms-input-placeholder, :-ms-textarea-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(245,249,252,0.7);
+}
+::-ms-input-placeholder, ::-ms-textarea-placeholder { /* Microsoft Edge */
+    color: rgba(245,249,252,0.7);
+}
+
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 426px) { 
+    /* Navigation Menu */
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 5px 0;
+    }
+    
+    .title {
+        font-size: 2rem;
+        padding: 0 0 2.5vw;
+    }
+    
+    .sub-title {
+        font-size: 0.75em;
+        line-height: 1.25em;
+        text-transform: uppercase;
+    } 
+    
+    .body-text {
+        font-size: 0.75em;
+        line-height: 1.25em;
+        padding: 10px 1vw 25px;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 1em;
+    }
+
+    .info {
+        font-size: 0.75em;
+    }
+    
+    .button-read-more{
+        font-size: 0.8em; 
+        background-color: rgba(29,68,112,1);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    
+    input, textarea{
+        font-size: 0.75em;
+        line-height: 1.25em;
+    }
+    
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    nav ul li a {
+        font-size: .9rem;
+    }
+    
+    .title {
+        font-size: 3rem;
+        padding: 25px 0;
+    }
+    
+    .sub-title {
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+    
+    .body-text {
+        font-size: 15px;
+        line-height: 1.3em;
+        padding: 10px .5vw ;
+    }
+    
+    .cite a{
+        font-size: .9em;
+        line-height: 1.5em;
+    }
+    
+    .name{
+        padding: 10px;
+        font-size: 2.5rem;
+        padding: 15px 0 15px 0;
+    }
+
+    .info {
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    
+    .button-read-more{
+        font-size: 1.2em;
+        transition: .25s ease-in-out; 
+    }
+    
+    .button-read-more:hover{
+        background-color: #B3811A;   
+    }
+    
+    .button-read-more:active{
+        background-color: #B3811A;   
+    }
+    
+    input, textarea{
+        font-size: 15px;
+        line-height: 1.3em;
+    }
+}
+
+/* ========================= GLOBAL ICON STYLES =========================*/
+/* === Mobile ===*/
+.icon-small{
+        display: block;
+        width: 25px;
+        height: 25px;
+        content: '';
+        background-size: cover; /* use px or 'cover' to fill */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .icon-large{
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        content: '';
+        background-size: 40px; /* use px or 'cover' to fill */
+        background-repeat: no-repeat;
+        background-position: center;    
+    } 
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 426px) { 
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    .icon-large{
+        background-size: cover; /* use px or 'cover' to fill */  
+    } 
+}
+
+
+
+/* ========================= BACKGROUND ========================= */ 
+/* === Mobile ===*/
+body {
+    background-color: #111E2B;   
+}
+
+/* === Tablet ===*/  
+@media only screen and (min-width: 426px) {
+body {
+    background: url(../../assets/images/Terrain.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+}
+
+
+    
+/* ========================= HEADER ========================= */
+/* === Mobile ===*/
+#header{
+    display: block;
+    background-color: #F5F9FC;
+    width: 100vw;
+    height: 39px;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #B3811A;
+    box-shadow: 0 0 25px #111E2B;
+    z-index: 3;
+}
+
+#header-content { 
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 426px) {
+    #header { 
+        background-color: rgba(244,248,253,0.9);
+        box-shadow: 0 0 25px rgba(17,30,43,0.5);
+    }  
+    
+    #header-content { 
+        justify-content: inherit;
+    }
+}
+
+/* === Desktop ===*/ 
+
+
+/* ========================= LOGO SMALL ========================= */
+/* === Mobile ===*/
+#logo-small {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 18pt;
+    text-transform: uppercase;
+    font-weight: 800;
+
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 426px){
+    #logo-small {
+        width: 70px;
+        height: 50%;
+        position: relative;
+        left: 40px;
+        border-right: 2px solid #B3811A;
+        padding: 0 15px 0 25px;
+        }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){}
+
+/* ========================= HEADER NAVIGATION MENU ========================= */
+/* === Mobile ===*/
+#headerNav {
+        display: none;
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 426px){
+    #headerNav {
+        display: inherit;
+        width: 0px;
+        position: relative;
+        left: 50px;
+        overflow: hidden;
+        }
+    
+    #headerNav.closed {
+        width: inherit;
+        }
+    
+    #headerNav nav ul li a {
+        background-color: rgb(0, 0, 0, 0);
+        padding: 4px 0px; 
+        transition: 1.0s;
+    }
+    
+    #headerNav.closed nav ul li a {
+        padding: 4px 10px;
+        transition: .5s;
+    }
+    
+    #headerNav.closed ul li a:hover {
+        color: #F5F9FD;
+        background-color: #B3811A;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    
+}
+
+/* ========================= FOLLOW ME ICONS SMALL ========================= */
+/* === Mobile ===*/
+#follow-me-header-small {
+        display: none;
+}
+/* === Laptop and tablet === */
+@media only screen and (min-width: 426px) {
+    #follow-me-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        position: absolute;
+        right: 40px;
+    }
+    
+    #follow-me-header-wrapper a{
+        display: inline-block;
+        background-color:  #111E2B;
+        opacity: 0.75;
+        border-radius: 5px;
+        -webkit-transition: .1s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .1s ease-in-out; /*  Firefox */
+        -o-transition: .1s ease-in-out; /*  Opera */
+        transition: .1s ease-in-out;   
+    }
+    
+    #follow-me-header-wrapper a:hover{
+        background-color: #B3811A;
+        opacity: 1.0;
+    }
+    
+    #follow-me-header-wrapper a:nth-child(1) .icon-small{
+        background-image: url('../../assets/images/FacebookIcon.png')}
+    #follow-me-header-wrapper a:nth-child(2) .icon-small{
+        background-image: url('../../assets/images/LinkedinIcon.png')}
+    #follow-me-header-wrapper a:nth-child(3) .icon-small{
+        background-image: url('../../assets/images/WordpressIcon.png')}
+    #follow-me-header-wrapper a:nth-child(4) .icon-small{
+        background-image: url('../../assets/images/PinterestIcon.png')}
+    #follow-me-header-wrapper a:nth-child(5) .icon-small{
+        background-image: url('../../assets/images/GitHubIcon.png')}
+    #follow-me-header-wrapper a:nth-child(6) .icon-small{
+        background-image: url('../../assets/images/GrasshoopperIcon.png')}  
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){ 
+    #follow-me-header-wrapper {
+        right: 50px;
+    }
+}
+
+
+/* ==================== LOGO LARGE ====================*/
+/* === Mobile preview === */
+/* === Laptop and tablet === */
+@media only screen and (min-width: 426px) {
+    #logo-large{
+        display: block;
+        width: 259px;
+        height: 125px;
+        position: fixed;
+        top: 0;
+        left: 40px;
+        background: url(../../assets/images/tedseven-logo.png);
+        background-color: #F5F9FD;
+        background-size: 50% ;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-right: 1px solid #B3811A;
+        transition: .25s ease-in-out; 
+    }
+    
+    #logo-large.closed{
+        width: 0px;
+    }
+}
+/* === Desktop === */
+@media only screen and (min-width: 1280px){  
+    #logo-large{
+        width: 359px;
+        height: 175px;
+    }
+}
+
+/* ========================= SIDEBAR NAVIGATION MENU ========================= */
+/* === Mobile ===*/
+#sideBarNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    top: 40px;
+    left: 0px;
+    overflow: hidden;
+    background-color: #B3811A; 
+    transition: .25s ease-in-out;
+    box-shadow: 0 5px 10px rgba(17,30,43,0.75);
+}
+
+#sideBarNav.closed {
+    height: 0px;
+}
+
+#sideBarNav ul li a {
+    color: #F5F9FD;
+    background-color: #B3811A; 
+}
+
+nav ul {
+    display: flex;
+}
+    
+/* === Tablet ===*/
+@media only screen and (min-width: 426px){
+    #sideBarNav {
+        align-items: baseline;
+        width: 259px;
+        height: 100%;
+        top: 125px;
+        left: 40px;
+        background-color: inherit;
+        box-shadow: none;
+    }
+    
+    #sideBarNav.closed {
+        width: 0px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        flex: 1;
+    }
+    
+    #sideBarNav ul li {
+        flex: 1;
+    }
+    
+    #sideBarNav ul li a {
+        text-align: center;
+        color: inherit;
+        border-bottom: 1px solid #B3811A;
+        background-color: #F5F9FD;  
+    }
+    
+    #sideBarNav ul li a:hover {
+        color: #F5F9FD;
+        background-color: #B3811A;
+        transition: .1s;
+    }
+    
+    #sideBarNav ul li a:focus {
+        color: #F5F9FD;
+        background-color: #283440;
+        border: 1px solid #B3811A;
+        border-bottom: 0px solid #B3811A;
+        transition: .25s;
+    }
+    
+    nav ul li:first-child a:focus {
+        border-left: 0px solid #F5F9FD;
+    }
+    
+    nav ul li:last-child a:focus {
+        border-right: 0px solid #F5F9FD;
+    }  
+}
+
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){  
+    #sideBarNav {
+        width: 359px;
+        top: 175px;
+    }
+}
+
+
+/* =========================  MAIN CONTENT =========================*/
+#main{
+  display:block;
+  max-width: 1920px;
+  margin:0 auto;
+}
+
+
+/* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
+/* === Mobile ===*/ 
+#sidebar-button{
+    position: relative;
+    z-index: 4;   
+}
+
+/* === Tablet ===*/ 
+@media only screen and (min-width: 426px){
+    #main-content{
+        display:grid;
+        grid-template-columns: 40px auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "sidebar-button about"
+            "sidebar-button projects"
+            "sidebar-button blog"
+            "sidebar-button contact";
+    }
+
+    #sidebar-button{
+        grid-area: sidebar-button;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(17,30,43,1);
+        position: relative;
+        cursor: pointer;
+        z-index: 3;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+    
+    #sidebar-button:hover {
+        background-color: #B3811A;
+    }
+
+    #about{
+        grid-area: about;
+        display: flex;
+    }
+
+    #projects{
+        grid-area: projects;
+        display: flex;
+    }
+    
+    #blog{
+        grid-area: blog;
+        display: flex;
+    }
+    
+    #contact{
+        grid-area: contact;
+        display: flex;
+    }
+
+    .sidebar{
+        width: 259px;
+        max-height: 100vh;
+        z-index: 2;
+        position: relative;
+        background-color: rgba(17,30,43,0.9);
+        border-right: 1px solid #B3811A;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out; 
+        overflow: hidden;
+    }
+
+    .sidebar.closed{
+        width: 0px;
+        padding: 0;
+    }
+
+    .content{
+        flex: 1;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+    
+    .infoBar{
+        padding: 175px 15px calc((15px*2) + 18px);
+    }   
+}  
+
+
+ /* === Desktop  ===*/ 
+@media only screen and (min-width: 1280px){
+    .sidebar{
+        width: 359px;
+        height: 100vh;
+    }
+    
+    .infoBar{
+        padding: 220px 30px calc((15px*2) + 18px);
+    }
+    
+}
+
+
+/* ==================== HAMBURGER MENU ICON ====================*/
+/* === Mobile ===*/ 
+/* === Laptop and tablet === */ 
+/* === Desktop === */
+/* Hamburger Icon */
+    #nav-wrapper {
+        position: fixed;
+        top: 0;
+        background-color: #b3811a;
+        width: 40px;
+        height: 40px;  
+    }
+
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 10px;
+        -webkit-transform: rotate(0deg); /* Chrome, Safari 10.1+ */
+        -moz-transform: rotate(0deg); /*  Firefox */
+        -o-transform: rotate(0deg); /*  Opera */
+        transform: rotate(0deg);
+    }
+
+    .nav-icon span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #f5f9fd;
+        opacity: 1;
+        left: 0;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+
+    .nav-icon span:nth-child(1) {
+        top: 8px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .nav-icon span:nth-child(2) {
+        top: 8px;
+        -webkit-transform: rotate(45deg); /* Chrome, Safari 10.1+ */
+        -moz-transform: rotate(45deg); /*  Firefox */
+        -o-transform: rotate(45deg); /*  Opera */
+        transform: rotate(45deg);
+    }
+
+    .nav-icon span:nth-child(3) {
+        top: 8px;
+        -webkit-transform: rotate(-45deg); /* Chrome, Safari 10.1+ */
+        -moz-transform: rotate(-45deg); /*  Firefox */
+        -o-transform: rotate(-45deg); /*  Opera */
+        transform: rotate(-45deg);
+    }
+
+    .nav-icon span:nth-child(4) {
+        top: 8px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .nav-icon.closed span {
+        -webkit-transform: rotate(0deg); /* Chrome, Safari 10.1+ */
+        -moz-transform: rotate(0deg); /*  Firefox */
+        -o-transform: rotate(0deg); /*  Opera */
+        transform: rotate(0deg);
+        left: 0;
+    }
+
+    .nav-icon.closed span:nth-child(1) {
+        top: 0px;
+        width: 100%;
+    }
+
+    .nav-icon.closed span:nth-child(4) {
+        top: 16px;
+        width: 100%;
+    }
+
+
+
+/* ==================== 1. SECTION ONE ====================*/
+/* ==================== 1.1 1ABOUT ME ====================*/
+/* === Mobile preview === */
+#about-info h2{
+    border-bottom: 1px solid #B3811A;
+    height: 5vh;
+    margin: 5% 10% 0; 
+}
+
+/* === Laptop and tablet === */ 
+@media only screen and (min-width: 426px) {
+    #about-info h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3vh;
+        margin: 0 5%; 
+    }   
+}
+
+/* === Desktop === */
+
+
+
+/* ==================== 1.2 BANNER ====================*/
+/* === Mobile preview === */
+/* === Tablet === */
+@media only screen and (min-width: 426px) {
+    #banner{
+        background: url('../../projects/design/paleo/front-external.jpg');
+        background-color: #F5F9FD;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;*/
+    }
+}
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #about-info h2{
+        height: 3vh;
+        margin: 5% 5% 0; 
+    } 
+}
+
+
+
+/* ==================== 2. SECTION TWO ====================*/
+/* ==================== 2.1 PROJECTS ====================*/
+/* === Mobile preview === */
+#projects .tab a  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    margin: 5% 10% 0; 
+    border: 1px solid #B3811A;
+    background-color: rgba(17,30,43,0.5);
+    -webkit-transition: 0.2s; /* Chrome, Safari */
+    -moz-transition: 0.2s; /* Firefox */
+    -o-transition: 0.2s; /* Opera */
+    transition: 0.2s;
+    } 
+
+#projects .tab a:hover {
+    background-color: #B3811A;
+    }
+
+#projects .sub-title {
+    border-bottom: none;
+    } 
+
+#projects .tab a .icon-small {
+        margin: 0 2.5%;
+    }
+
+    .tab:nth-child(1) a .icon-small{
+        background-size: 80%;
+        background-image: url('../../assets/images/ArchIcon.png')}
+    .tab:nth-child(2) a .icon-small{
+        background-image: url('../../assets/images/RenderIcon.png')}
+    .tab:nth-child(3) a .icon-small{
+        background-image: url('../../assets/images/DigitalIcon.png')}
+
+
+/* === Tablet === */
+@media only screen and (min-width: 426px) {
+    #projects .tab a  { 
+        height: 3vh;
+        margin: 0 5%;
+    }
+    
+    #projects .tab a .icon-small {
+        margin: 0 2.5%;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #projects .tab a  { 
+        height: 3vh;
+        margin: 5% 5% 0;
+    }
+    
+    #projects .tab a:active {
+        margin: 5% 15% 0;
+    }
+    
+    #projects .tab a .icon-small {
+        margin: 0 2.5%;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+/* ==================== 2.2 PROJECTS GALLERY ====================*/
+/* === Mobile preview === */
+#gallery{
+    display: grid;
+    grid-template-rows: repeat(4, 320px);
+    position: relative;
+}
+
+.project-thumbnail{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    position: relative;
+    content: '';
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 125px rgba(17,30,43,0.85);
+    z-index: 1;
+}
+
+.thumbnail-img{
+    flex: 1;
+    height: 100%;
+
+}
+
+.project-thumbnail .invisible-link{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-decoration: none;
+    z-index: 2;
+    color: #F5F9FC;
+    opacity: 1;
+    background-color: rgba(179,129,26,0.8);
+}
+
+.project-thumbnail:nth-child(1)  {background-image: url('../../projects/visuals/pompilio/pompilio.png');}
+.project-thumbnail:nth-child(2)  {background-image: url('../../projects/design/tiny-homes/th-kitchen.jpg');}
+.project-thumbnail:nth-child(3)  {background-image: url('../../projects/coding/kartal/extrude-proximity.jpg');}
+.project-thumbnail:nth-child(4)  {background-image: url('../../projects/design/paleo/preparation.jpg');}
+
+/* === Tablet === */
+@media only screen and (min-width: 426px) {
+    #gallery{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin: 50px 10px 10px 10px;
+    } 
+    
+    #gallery .project-thumbnail{
+        border: 1px solid #B3811A;
+    }
+    
+    .project-thumbnail:nth-child(1), .project-thumbnail:nth-child(4){
+        grid-row: span 1;
+        grid-column: span 2; 
+    }
+    
+    .project-thumbnail:nth-child(2), .project-thumbnail:nth-child(3){
+        grid-row: span 1;
+        grid-column: span 1; 
+    }    
+}
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #gallery{
+        grid-gap: 15px;
+        margin: 80px 30px 30px 30px;
+    }
+
+    .project-thumbnail:hover{
+        background-color: rgba(179,129,26,1.0);
+        background-blend-mode: soft-light;
+    }
+    
+    .project-thumbnail .thumbnail-img{
+        -webkit-transition: 0.35s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.35s ease-in-out; /* Firefox */
+        -o-transition: 0.35s ease-in-out; /* Opera */
+        transition: 0.35s ease-in-out;
+    }
+
+    .project-thumbnail:hover .thumbnail-img{
+        filter: blur(3px);
+        -webkit-transform: scale(1.05); /* Chrome, Safari */
+        -moz-transform: scale(1.05); /* Firefox */
+        -o-transform: scale(1.05); /* Opera */
+        transform: scale(1.05);
+    }
+
+    .project-thumbnail .invisible-link{
+        bottom: inherit;
+        text-decoration: none;
+        z-index: 2;
+        opacity: 0;
+        background-color: transparent;
+        -webkit-transition: 0.35s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.35s ease-in-out; /* Firefox */
+        -o-transition: 0.35s ease-in-out; /* Opera */
+        transition: 0.35s ease-in-out;
+    }
+
+    .project-thumbnail:hover .invisible-link{
+        opacity: 1;
+    }
+}
+
+/* ==================== 3. SECTION THREE ====================*/
+/* ==================== 3.1 BLOG ====================*/
+/* === Mobile preview === */
+.blog{
+    position: relative;
+    padding: 0 0 calc((15px*2) + 18px) 0;
+}
+
+.blog .button-read-more{
+    display: none;
+    }
+/* === Tablet === */
+@media only screen and (min-width: 426px){
+
+        
+    .blog .button-read-more{
+        display: inherit;
+    }   
+}
+
+/* === Desktop === */
+
+/* ==================== 3.2 BLOG POSTS ====================*/
+/* === Mobile preview === */
+#blog-posts{
+    position: relative;
+    background-color: #F5F9FC;
+    padding: 5% 0 0 0;
+}
+
+
+#blog-posts .sub-title {
+    color: #111E2B;
+    line-height: 1.25em;
+    text-align: center;
+    margin: 5% 10%;
+    border: none;
+}
+
+#blog-posts .body-text {
+    color: #111E2B;
+    }
+
+.cite{
+    display: none;
+}
+
+#blog-posts article .button-read-more{
+    background-color: rgba(179,129,26,0.75);
+    }
+
+/* === Tablet === */
+@media only screen and (min-width: 426px){
+    #blog-posts{
+        display: flex;
+        margin: 75px 10px;
+        justify-content: space-between;
+        background-color: inherit;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 600px;
+        padding: 0;
+    }
+    
+    .post{
+        flex-basis: 220px;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: rgba(244,248,253,0.75);
+        position: relative;
+        border: 1px solid #B3811A;
+    }
+    
+    .blog-img-container{
+        height: 175px;
+        content: '';
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid #B3811A;
+        box-shadow: inset 0 0 75px rgba(17,30,43,0.5);
+    }
+    
+    #post01 .blog-img-container {background-image: url('../../projects/visuals/pompilio/pompilio.png');}
+
+    #post02 .blog-img-container {background-image: url('../../projects/design/tiny-homes/th-kitchen.jpg');}
+
+    #post03 .blog-img-container {background-image: url('../../projects/coding/kartal/extrude-proximity.jpg');}
+
+    #post04 .blog-img-container {background-image: url('../../projects/design/paleo/preparation.jpg');}
+    
+    #blog-posts .sub-title {
+        margin: 5%;
+    }
+
+    #blog-posts .body-text {
+        margin: 5% ;
+    }
+    
+    #blog-posts .today{
+        padding: 0;
+        margin: 0 25% 0 25%;
+    }
+    
+    #blog-posts article .button-read-more{
+        display: block;
+    }
+    
+    #blog-posts .button-read-more{
+        display: none;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #blog-posts{
+        justify-content: space-between;
+        margin: calc((100vh - 750px) / 2) 75px;
+        height: 750px;
+    }
+    
+    .post{
+        flex-basis: 400px;
+        overflow: hidden; 
+        -webkit-transition: 0.5s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.5s ease-in-out; /* Firefox */
+        -o-transition: 0.5s ease-in-out; /* Opera */
+        transition: 0.5s ease-in-out;
+    }
+    
+    .post:hover{
+        transition: .35s ease-in-out;
+        background-color: rgba(244,248,253,1);  
+    }
+     
+    .blog-img-container{
+        height: 250px;
+        max-height: 250px;
+        box-shadow: inset 0 0 75px rgba(17,30,43,0.75);
+        -webkit-transition: 0.2s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.2s ease-in-out; /* Firefox */
+        -o-transition: 0.2s ease-in-out; /* Opera */
+        transition: 0.2s ease-in-out;
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
+    }
+    
+    .post:hover .blog-img-container{
+        -webkit-filter: grayscale(0%); /* Chrome, Safari */
+        filter: grayscale(0%);
+    }
+    
+    .cite{
+        display: block;
+    }
+
+    #blog-posts .button-read-more:hover{
+        background-color:  #B3811A;
+    }
+}
+
+/* ==================== 4. SECTION FOUR ====================*/
+/* ==================== 4.1 CONTACT ME ====================*/
+/* === Mobile preview === */
+/* === Tablet === */
+/* === Desktop === */
+
+
+/* ==================== 4.2 CONTENT - GENERAL & CONTACT FORM ====================*/
+/* === Mobile preview === */
+#contact-details{
+    position: relative;
+    padding: 5% 0 0 0;
+}
+
+#contact-details .name {
+        padding: 40px 0 10px;
+    }
+
+input, textarea{
+    display: block;
+    width: calc(85% - 50px);
+    padding: 5px 10px;
+    margin: 40px auto ;
+    border-bottom: 1px solid #F5F9FC;
+    text-align: center;
+    color: #F5F9FC;
+    background-color: transparent;
+    -webkit-transition: 0.5s; /* Chrome, Safari */
+    -moz-transition: 0.5s; /* Firefox */
+    -o-transition: 0.5s; /* Opera */
+    transition: 0.5s;
+}
+
+input:focus, textarea:focus{
+    border-bottom: 3px solid #F5F9FC;
+    background-color: rgba(245,249,252,0.05);        
+}
+   
+textarea{
+    resize: none;
+    text-align: left;
+    max-width: calc(100% - 50px);
+    height: 250px;
+    min-height: 50px;  
+}
+
+#contact-details .button-read-more{
+    background-color: rgba(179,129,26,0.75);
+}
+
+/* === Tablet === */
+@media only screen and (min-width: 426px){
+    #contact-details{
+        display: flex;
+        margin: 75px 10px;
+        justify-content: space-between;
+        background-color: inherit;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 600px;
+        padding: 0;
+    }
+    
+    .contactTab{
+        flex-basis: 220px;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: rgba(17,30,43,0.9);
+        position: relative;
+        border: 1px solid #B3811A;
+    }
+    
+    #contact-form{
+        /* Double tab */
+        flex-basis: calc((100% + 220px) / 2); /* 220px as per default value above */
+    }
+    
+    #contact-details .name {
+        font-size: 1.5em;
+    }
+    
+    input, textarea{
+        width: calc(60% - 50px);
+    }
+    
+    textarea{
+        height: 100%;
+        max-height: 220px;
+    }
+    
+    input:focus{
+        width: calc(75% - 50px);       
+    }
+    
+    textarea:focus{
+        width: calc(100% - 50px);
+    }
+    
+    #contact-details .body-text {
+        margin: 5% 5% 0 5% ;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #contact-details{
+        margin: calc((100vh - 750px) / 2) 75px;
+        height: 750px;
+    }
+    
+    .contactTab{
+        flex-basis: 400px; 
+        overflow: hidden; 
+        position: relative;
+        background-color: rgba(17,30,43,0.75);
+        -webkit-transition: 0.5s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.5s ease-in-out; /* Firefox */
+        -o-transition: 0.5s ease-in-out; /* Opera */
+        transition: 0.5s ease-in-out;
+    }
+    
+    #contact-form{
+        /* Double tab */
+        flex-basis: calc((100% + 400px) / 2); /* 400px as per default value above */
+    }
+    
+    .contactTab:hover{
+        background-color: rgba(17,30,43,0.95);  
+    }
+    
+    #contact-details .name {
+        font-size: 2.5em;
+    }
+    
+    textarea{
+        height: 100%;
+        max-height: 320px;
+    }
+    
+    #contact-details .button-read-more:hover{
+        background-color:  #B3811A;
+    }
+     
+}
+
+/* ==================== 4.2.2 CONTENT - FOLLOW ME ====================*/
+/* === Mobile ===*/
+    #follow-me-tab-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 25px 10%; 
+        height: 450px;
+    }
+    
+    #follow-me-tab-wrapper a{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(17,30,43,0.6);
+        border: 1px solid #B3811A;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+        overflow: hidden;
+    }
+    
+    #follow-me-tab-wrapper a:hover{
+        background-color: #B3811A;
+    }
+    
+    #follow-me-tab-wrapper a .icon-large{
+        position: absolute;
+        left: 0;
+    }  
+    
+    #follow-me-tab-wrapper a:nth-child(1) .icon-large{
+        background-image: url('../../assets/images/FacebookIcon.png')}
+    #follow-me-tab-wrapper a:nth-child(2) .icon-large{
+        background-image: url('../../assets/images/LinkedinIcon.png')}
+    #follow-me-tab-wrapper a:nth-child(3) .icon-large{
+        background-image: url('../../assets/images/WordpressIcon.png')}
+    #follow-me-tab-wrapper a:nth-child(4) .icon-large{
+        background-image: url('../../assets/images/PinterestIcon.png')}
+    #follow-me-tab-wrapper a:nth-child(5) .icon-large{
+        background-image: url('../../assets/images/GitHubIcon.png')}
+    #follow-me-tab-wrapper a:nth-child(6) .icon-large{
+        background-image: url('../../assets/images/GrasshoopperIcon.png')}
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 426px) {
+    #follow-me-tab-wrapper {
+        margin: 25px 5%;
+        height: 390px;
+    }
+    
+    #follow-me-tab-wrapper a{
+        height: 50px;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1280px){
+    #follow-me-tab-wrapper {
+        height: 525px;
+        margin: 25px 5% 50px;
+    }
+    
+    #follow-me-tab-wrapper a .icon-large{
+        left: 25px; 
+    } 
+}
+
+/* === FOOTER === */
+/* === Mobile ===*/
+/* === Laptop and tablet === */
+/* === Desktop === */
