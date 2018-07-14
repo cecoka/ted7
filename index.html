@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,7 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:300,400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="common/css/style.css">
-        <script  src="common/scripts/index.js"></script>
+        <script src="common/scripts/toggleSideMenu.js"></script>
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+        <script src="common/scripts/set-image-test.js"></script>
+<!--
+        <script> window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();}}
+        </script>
+-->
     </head>
     <body>
         <!--- === Start Page Header === --->
@@ -87,7 +100,31 @@
                         </div> 
                     </div>
                     
-                    <div id="banner" class="content"></div>
+                    <div id="banner" class="content"> 
+                        <!-- A-Frame 360 VR Panorama plugin -->
+                        <a-scene class="aframebox" vr-mode-ui="enabled: false" embedded>
+                            <a-assets>
+                                <img id="Paleo1" crossorigin="anonymous" src="/projects/design/paleo/Collection360.jpg"> 
+                                <img id="Paleo2" crossorigin="anonymous" src="/projects/design/paleo/Prep360.jpg">
+                            </a-assets>
+                            
+                            <!-- Invert Mouse Drag -->
+                            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+                            
+                            <!-- 360-degree image. -->
+                            <a-sky id="image-360" radius="100" src="#Paleo2">
+                                <a-animation attribute="rotation" easing="linear" dur="200000" to="0 360 0" repeat="indefinite"></a-animation>
+                            </a-sky> 
+                            
+                            <!-- Image links. -->
+                            <div id="links"> 
+                                <button class="setVRimg" src="#Paleo1"></button>
+                                <button class="setVRimg" src="#Paleo2"></button>
+                            </div>
+                        </a-scene>
+                        
+                        <script src="common/scripts/set-image-test.js"></script>
+                    </div>
                 </section>
                 
                 <!--- === Projects  === --->
@@ -284,14 +321,6 @@
                                 <a href="#"><div class="icon-large"></div><p class="info">Grasshopper</p></a>
                             </div>
                         </div>
-                        
-                        <!--<div id="contactTab3" class="contactTab">
-                            <h2 class="sub-title">Tab 3</h2>
-                        </div>
-                        
-                        <div id="contactTab4" class="contactTab">
-                            <h2 class="sub-title">Tab 4</h2>
-                        </div>-->
                     </div>
                 </section>
                 
