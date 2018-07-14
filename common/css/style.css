@@ -303,6 +303,14 @@ input, textarea{
         bottom: 0;
     }
     
+    .button-read-more:hover{
+        background-color: #B3811A;   
+    }
+    
+    .button-read-more:active{
+        background-color: #B3811A;   
+    }
+    
     input, textarea{
         font-size: 0.75em;
         line-height: 1.25em;
@@ -352,14 +360,6 @@ input, textarea{
         font-size: 1.2em;
         padding: 15px 0;
         transition: .25s ease-in-out; 
-    }
-    
-    .button-read-more:hover{
-        background-color: #B3811A;   
-    }
-    
-    .button-read-more:active{
-        background-color: #B3811A;   
     }
     
     input, textarea{
@@ -444,7 +444,6 @@ body {
 }
 
 
-    
 /* ========================= HEADER ========================= */
 /* === Mobile ===*/
 #header{
@@ -778,6 +777,8 @@ nav ul {
 
 /* =========================  MAIN CONTENT =========================*/
 
+
+
 /* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
 /* === Mobile ===*/ 
 #sidebar-button{
@@ -1007,16 +1008,65 @@ nav ul {
 @media only screen and (min-width: 600px) and (min-height: 600px) {
     #banner{
         background: url('../../projects/design/paleo/front-external.jpg');
-        background-color: #F5F9FD;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+    
+    #banner a-scene{
+        display: none;
+    }
+    
 }
+
 /* === Desktop === */
+@media only screen and (min-width: 1024px){
+    #banner{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;  
+        height: 100vh;
+    }
 
-
-
+    #banner a-scene{
+        display: block;
+    }
+    
+    #links{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .setVRimg{
+        display: block;
+        width: 75px;
+        height: 75px;
+        margin: 0 1vw;
+        background: black;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid #B3811A;
+        z-index: 10;
+    }
+    
+    .setVRimg:focus{
+        border: 3px solid #111E2B;
+    }
+    
+    .setVRimg:nth-child(1) {
+        background-image: url('../../projects/design/paleo/collection.jpg')}
+    .setVRimg:nth-child(2) {
+        background-image: url('../../projects/design/paleo/preparation.jpg')}
+    
+}
+ 
 
 /* ==================== 2. SECTION TWO ====================*/
 /* ==================== 2.1 PROJECTS ====================*/
