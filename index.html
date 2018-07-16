@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:300,400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="common/css/style.css">
         <script src="common/scripts/toggleSideMenu.js"></script>
+        <script src="common/scripts/loader.js"></script>
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
         <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
@@ -24,6 +25,11 @@
 -->
     </head>
     <body>
+        <div id="loadingScreen">
+            <div id="loader"></div>
+            <p id="loaderText" class="sub-title"><font color="#1D4470">ted</font><font color="#AC7521">7</font></p>
+        </div>
+        
         <!-- === Start Page Header === -->
         <header id="header">
             <div id="header-content">
