@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>TED7 - Home </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/tsfavicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/images/tsfavicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:300,400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="common/css/style.css">
         <script src="common/scripts/toggleSideMenu.js"></script>
@@ -30,10 +32,14 @@
                 <div id="headerNav">
                     <nav role="navigation" aria-label=”Main menu”>
                         <ul>
-                            <li><a href="#about" id="navButtonAbout">About</a></li>
-                            <li><a href="#projects" >Projects</a></li>
-                            <li><a href="#blog" >Blog</a></li>
-                            <li><a href="#contact" >Contact</a></li>
+                            <li><a onclick="toTop(); return false;"
+                                   class="NavButton" href="#about">About</a></li>
+                            <li><a onclick="initScroll('projects'); return false;"
+                                   class="NavButton" href="#projects">Projects</a></li>
+                            <li><a onclick="initScroll('blog'); return false;"
+                                   class="NavButton" href="#blog">Blog</a></li>
+                            <li><a onclick="initScroll('contact'); return false;"
+                                   class="NavButton" href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,10 +60,14 @@
                 <div id="sideBarNav">
                     <nav role="navigation" aria-label=”Main menu”>
                         <ul>
-                            <li><a href="#about" id="navButtonAbout">About</a></li>
-                            <li><a href="#projects" >Projects</a></li>
-                            <li><a href="#blog" >Blog</a></li>
-                            <li><a href="#contact" >Contact</a></li>
+                            <li><a onclick="toTop(); return false;"
+                                   class="NavButton" href="#about">About</a></li>
+                            <li><a onclick="initScroll('projects'); return false;"
+                                   class="NavButton" href="#projects">Projects</a></li>
+                            <li><a onclick="initScroll('blog'); return false;"
+                                   class="NavButton" href="#blog">Blog</a></li>
+                            <li><a onclick="initScroll('contact'); return false;"
+                                   class="NavButton" href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -333,5 +343,6 @@
         <footer>
         </footer>
         <!--- === End Main Footer === --->
+        <script src="common/scripts/smoothScroll.js"></script>
     </body>
 </html>      
