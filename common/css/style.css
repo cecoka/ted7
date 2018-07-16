@@ -715,14 +715,14 @@ nav ul {
         flex: 1;
     }
     
-    #sideBarNav ul li a {
+    #sideBarNav .NavButton {
         text-align: center;
         color: inherit;
         border-bottom: 1px solid #B3811A;
         background-color: #F5F9FD;  
     }
     
-    #sideBarNav ul li a:hover {
+    #sideBarNav .NavButton:hover {
         color: #F5F9FD;
         background-color: #B3811A;
         -webkit-transition: .1s; /* Chrome, Safari */
@@ -731,24 +731,19 @@ nav ul {
         transition: .1s;
     }
     
-    #sideBarNav ul li a:focus {
+/* INSIDE smoothScroll.js
+    #sideBarNav .NavButtonSelected {
         color: #F5F9FD;
         background-color: #283440;
         border: 1px solid #B3811A;
         border-bottom: 0px solid #B3811A;
-        -webkit-transition: .25s ; /* Chrome, Safari */
-        -moz-transition: .25s ; /*  Firefox */
-        -o-transition: .25s ; /*  Opera */
+        -webkit-transition: .25s ;
+        -moz-transition: .25s ; 
+        -o-transition: .25s ;
         transition: .25s ;
     }
-    
-    nav ul li:first-child a:focus {
-        border-left: 0px solid #F5F9FD;
-    }
-    
-    nav ul li:last-child a:focus {
-        border-right: 0px solid #F5F9FD;
-    }  
+*/
+   
 }
 
 
@@ -777,8 +772,6 @@ nav ul {
 
 /* =========================  MAIN CONTENT =========================*/
 
-
-
 /* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
 /* === Mobile ===*/ 
 #sidebar-button{
@@ -796,7 +789,7 @@ nav ul {
             "sidebar-button about"
             "sidebar-button projects"
             "sidebar-button blog"
-            "sidebar-button contact";
+            "sidebar-button contact";   
     }
 
     #sidebar-button{
@@ -1004,19 +997,18 @@ nav ul {
 
 /* ==================== 1.2 BANNER ====================*/
 /* === Mobile preview === */
+.aframebox{
+        visibility: hidden;
+    }
+
 /* === Tablet === */
 @media only screen and (min-width: 600px) and (min-height: 600px) {
     #banner{
         background: url('../../projects/design/paleo/front-external.jpg');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-    }
-    
-    #banner a-scene{
-        display: none;
-    }
-    
+        background-repeat: no-repeat; 
+    }    
 }
 
 /* === Desktop === */
@@ -1029,8 +1021,8 @@ nav ul {
         height: 100vh;
     }
 
-    #banner a-scene{
-        display: block;
+    .aframebox{
+        visibility: visible;
     }
     
     #links{
@@ -1054,10 +1046,13 @@ nav ul {
         background-repeat: no-repeat;
         border: 1px solid #B3811A;
         z-index: 10;
+        opacity: 0.75;
     }
     
     .setVRimg:focus{
         border: 3px solid #111E2B;
+        outline-width: 0;
+        opacity: 1;
     }
     
     .setVRimg:nth-child(1) {
@@ -1280,21 +1275,21 @@ nav ul {
     padding: 5% 0 0 0;
 }
 
-
 #blog-posts .sub-title {
     color: #111E2B;
     line-height: 1.25em;
     text-align: center;
-    margin: 5% 10%;
+    margin: 5vh 10% 2.5vh;
     border: none;
 }
 
 #blog-posts .today{
-        margin: 0 25%;
+    margin: 0 25%;
     }
 
 #blog-posts .body-text {
     color: #111E2B;
+    margin: 2.5vh 0;
     }
 
 .cite{
