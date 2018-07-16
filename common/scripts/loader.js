@@ -10,7 +10,7 @@ window.onload = function() {
         function changeLoaderScreenWidth(){
             if (slider > 0){
                 slider --;
-                console.log(slider+"%");
+//                console.log(slider+"%"); //use for debugging
                 loadingScreen.style.width = slider+"%";
             }
             else {
