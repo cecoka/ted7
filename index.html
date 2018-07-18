@@ -15,21 +15,12 @@
         <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
         <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
         <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-        <script src="common/scripts/set360image.js"></script>
-<!--
-        <script> window.onload = function() {
-        if(!window.location.hash) {
-            window.location = window.location + '#loaded';
-            window.location.reload();}}
-        </script>
--->
     </head>
     <body>
         <div id="loadingScreen">
             <div id="loader"></div>
-            <p id="loaderText" class="sub-title"><font color="#1D4470">ted</font><font color="#AC7521">7</font></p>
+            <div id="loaderLogo"></div>
         </div>
-        
         <!-- === Start Page Header === -->
         <header id="header">
             <div id="header-content">
@@ -120,15 +111,17 @@
                         <!-- A-Frame 360 VR Panorama plugin -->
                         <a-scene class="aframebox" vr-mode-ui="enabled: false" embedded>
                             <a-assets>
-                                <img id="Paleo1" crossorigin="anonymous" src="projects/design/paleo/Collection360.jpg"> 
-                                <img id="Paleo2" crossorigin="anonymous" src="projects/design/paleo/Prep360.jpg">
+                                <img id="Paleo1" crossorigin="anonymous" 
+                                     src="projects/design/paleo/Prep360.jpg"> 
+                                <img id="Paleo2" crossorigin="anonymous" 
+                                     src="projects/design/paleo/Collection360.jpg" >
                             </a-assets>
                             
                             <!-- Invert Mouse Drag -->
                             <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
                             
                             <!-- 360-degree image. -->
-                            <a-sky id="image-360" radius="100" src="#Paleo2">
+                            <a-sky id="image-360" radius="100" src="#Paleo1">
                                 <a-animation attribute="rotation" easing="linear" dur="200000" to="0 360 0" repeat="indefinite"></a-animation>
                             </a-sky> 
                             
@@ -214,8 +207,8 @@
                     
                     <div id="blog-posts" class="content">
                         <article id="post01" class="post">
-                            <div class="blog-img-container">
-                                <!---<img src="projects/paleo/front-external.jpg">---></div>
+                            <div class="blog-img-container"></div>
+                            
                             <h2><a href="#" class="sub-title">Design Explorer by CORE | Thornton Tomasetti</a></h2>
 
                             <div class="today"><time datetime="yyyy-mm-dd">02/01/2018</time></div>
@@ -226,9 +219,7 @@
                         </article>
 
                         <article id="post02" class="post">
-                            <div class="blog-img-container">
-                                <!--<img src="projects/paleo/front-external.jpg">-->
-                            </div>
+                            <div class="blog-img-container"></div>
 
                             <h2><a href="#" class="sub-title">The architecture software revolution: From one size fits all to diy</a></h2>
 
@@ -251,8 +242,7 @@
                         </article>
                         
                         <article id="post03" class="post">
-                            <div class="blog-img-container">
-                                <!---<img src="projects/paleo/front-external.jpg">---></div>
+                            <div class="blog-img-container"></div>
 
                             <h2><a href="#" class="sub-title">Post Title 03</a></h2>
 
@@ -275,8 +265,7 @@
                         </article>
                         
                         <article id="post04" class="post">
-                            <div class="blog-img-container">
-                                <!---<img src="projects/paleo/front-external.jpg">---></div>
+                            <div class="blog-img-container"></div>
 
                             <h2><a href="#" class="sub-title">Post Title 04</a></h2>
 
@@ -300,12 +289,21 @@
                     </div>
                 </section>
       
-                <!--- === Contact === --->
+                <!-- === Contact === -->
                 <section id="contact">
                     <div id="contact-info" class="sidebar">
                         <div class="infoBar">
                             <h1 class="title">Get in touch</h1>
-                            <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                            
+                            <p id="contactCode" class="sub-title"> 
+                                <span><font color="#99ccff">if</font> need4.ArchVisualisation<br/></span>
+                                <span><font color="#99ccff">or</font> project.Discussion<br/></span>
+                                <span><font color="#99ccff">or</font> say ( <font color="#e5a422">''Hi!''</font> ) = <font color="#99ccff"> True </font> :<br/></span>
+                                <span><font color="#99ccff">fill</font> ( contactForm )<br/></span>
+                                <span><font color="#99ccff">send</font>( <font color="#e5a422">''yourMessage''</font> )<br/></span>
+                            </p>
+                            
+<!--                            <p class="body-text"></p>-->
                         </div>
                     </div>
                     
@@ -340,15 +338,25 @@
                         </div>
                     </div>
                 </section>
-                
             </div>
+            
+            
         </main>
         <!-- === End Main Content === -->
         
         <!-- === Start Main Footer === -->
         <footer>
         </footer>
-        <!--- === End Main Footer === --->
+        <!-- === End Main Footer === -->
+        
+        <!-- === Additional Scripts === -->
+<!--
+        <script> window.onload = function(){
+                var body = document.getElementsByTagName("body")[0]; 
+                body.style.overflow = "visible";
+            }
+        </script>
+-->
         <script src="common/scripts/smoothScroll.js"></script>
     </body>
-</html>      
+</html>     
