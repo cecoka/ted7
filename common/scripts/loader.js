@@ -7,16 +7,16 @@ window.onload = function() {
     loaderLogo.style.display = "none";
     body.style.overflow = "visible";
     if (document.readyState === "complete"){
-        var loaderScreenWidth = setInterval(changeLoaderScreenWidth, 10);
-        var slider = 100;
-        function changeLoaderScreenWidth(){
-            if (slider > 0 && screen.width >= 1024){
-                slider --;
-//               console.log(slider+"%"); //use for debugging
-                loadingScreen.style.width = slider+"%";
+        var loaderScreenOpacity = setInterval(changeLoaderScreenOpacity, 10);
+        var opacity = 1;
+        function changeLoaderScreenOpacity(){
+            if (opacity > 0 && screen.width >= 1024 && loadingScreen.style.opacity !== undefined){
+                opacity =  opacity - 0.01;
+//               console.log(opacity+"%"); //use for debugging
+                loadingScreen.style.opacity = opacity;
             }
             else {
-                clearInterval(loaderScreenWidth);
+                clearInterval(loaderScreenOpacity);
                 loadingScreen.style.display = "none";
             }
         }  

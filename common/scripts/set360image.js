@@ -4,10 +4,10 @@ var Button = document.getElementsByClassName("setVRimg");
 var i // your index is inside here
 
 for (i = 0; i < Button.length; i++) {
-       Button[i].addEventListener('click', function() {
+       Button[i].addEventListener('click', function set360img() {
            AFrameSky.setAttribute("src", this.getAttribute("src"));
            //use for debugging
            //console.log(this.getAttribute("src"));
-           //console.log(AFrameSky); //use for debugging
+           //console.log(AFrameSky);
     });
 }
