@@ -1,0 +1,67 @@
+/* ========================= LOADING SCREEN ========================= */ 
+body {
+    overflow: hidden; 
+}
+
+#loadingScreen{
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F9FC; 
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+#loader {
+    display: block;
+    border: 5px solid rgba(17,30,43,.1);
+    border-radius: 50%;
+    border-top: 5px solid #B3811A;
+    border-bottom: 5px solid #B3811A;
+    width: 10vw;
+    min-width: 125px;
+    height: 10vw;
+    min-height: 125px;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+    z-index: 5;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#loaderLogo{
+    display: block;
+    width: 7.5vw;
+    min-width: 150px;
+    height: 7.5vw;
+    min-height: 150px;
+    position: absolute;
+    background: url(../../assets/images/tedseven-logo.png);
+    background-color: #F5F9FD;
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 800px){
+    #loaderLogo{
+        background: url(../../assets/images/tedseven-logo.png);
+        background-color: #F5F9FD;
+        background-size: 7.5vw;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

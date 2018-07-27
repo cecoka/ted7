@@ -1,0 +1,1101 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul, ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select, textarea  {
+    vertical-align:middle;
+    border: 0px solid transparent;
+}
+
+input:focus, textarea:focus  {
+    border: 0px solid transparent;
+    outline-width: 0;
+}
+
+
+/*MY CODE*/ 
+/* ===================== COLOUR CODES ===================== */
+/*
+ORANGE = #B3811A  rgba(179,129,26,1)
+BRIGHTEST BLUE = #F5F9FC  rgba(245,249,252,1)
+DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1) 
+*/
+
+
+/* ========================= GLOBAL TEXT STYLES =========================*/
+
+* {text-decoration: none;}
+
+/* === Mobile ===*/ 
+
+/* Navigation Menu */
+nav ul li a {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 11pt;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #111E2B;
+    padding: 0 2.5vw;   
+}
+
+/* Titles */
+.title {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 800;
+    font-size: 24pt;
+    color: #F5F9FC;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0 10px;
+}
+
+/* Sub-Titles */
+.sub-title {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16pt;
+    line-height: 28pt;
+    color: #F5F9FC;
+    background: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Body text */
+.body-text, .today {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 14pt;
+    color: #F5F9FC;
+    text-align: justify;
+    padding: 10px 40px 16px; 
+}
+
+/* Button read more */
+.button-read-more{
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14pt; 
+    font-weight: 600;
+    color: #F5F9FC;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(29,68,112,1); 
+    padding: 15px 0;
+    text-shadow: 0 0 5px #111E2B;
+}
+
+/* Project Name */
+.name {
+    display: text;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600;
+    font-size: 12pt;
+    color: #F5F9FC;
+    text-align: center;
+    padding: 2px; 
+    text-shadow: 0 0 10px #111E2B;
+}
+
+/* Project Info */
+.info {
+    display: block;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 400;
+    font-size: 11pt;
+    text-decoration: none;
+    color: #F5F9FC;
+    background: none;
+    text-align: center;
+    padding: 2px;  
+    text-shadow: 0 0 5px #111E2B;
+}
+
+/* Blog date */
+.today{
+    color: #111E2B;
+    display: block;
+    text-align: center;
+    padding: 2.5%;
+    border-top: 1px solid #B3811A;
+    border-bottom: 1px solid #B3811A;
+}
+
+/* Blog Citation */
+.cite a{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 9pt;
+    line-height: 12pt;
+    color: #111E2B;
+    text-align: center;
+    text-decoration: none;
+    margin: 5%;   
+}
+
+/* Contact Input text */
+input, textarea{
+    font-family: 'Open Sans', sans-serif; 
+    color: #111E2B;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 14pt; 
+    text-align: left;    
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(245,249,252,0.7); 
+}
+:-ms-input-placeholder, :-ms-textarea-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(245,249,252,0.7);
+}
+::-ms-input-placeholder, ::-ms-textarea-placeholder { /* Microsoft Edge */
+    color: rgba(245,249,252,0.7);
+}
+
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) { 
+    /* Navigation Menu */
+    nav ul li a {
+        font-size: 75%;
+        padding: 5px 0;
+    }
+    
+    .title {
+        font-size: 150%;
+        padding: 0 0 1vw;
+    }
+    
+    .sub-title {
+        font-size: 75%;
+        text-transform: uppercase;
+    } 
+    
+    .body-text, .today {
+        font-size: 70%;
+        line-height: 125%;
+        padding: 1vw 1vw 1.5vw;
+        text-align: center;
+    }
+    
+    .today {
+        padding: 0.5vh;
+    }
+
+    .info {
+        font-size: 75%;
+    }
+    
+    .button-read-more{
+        font-size: 75%; 
+        padding: 1vh 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    
+    .button-read-more:hover{
+        background-color: #B3811A;   
+    }
+    
+    .button-read-more:active{
+        background-color: #B3811A;   
+    }
+    
+    input, textarea{
+        font-size: 75%;
+        line-height: 125%;
+    }
+    
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    nav ul li a {
+        font-size: 90%;
+    }
+    
+    .title {
+        font-size: 400%;
+        padding: 2.5vh 0;
+    }
+    
+    .sub-title {
+        font-size: 120%;
+    }
+    
+    .body-text, .today, input, textarea {
+        font-size: 90%;
+        line-height: 125%;
+        padding: .5vw;
+    }
+    
+    .cite a{
+        font-size: 90%;
+        line-height: 150%;
+    }
+    
+    .name{
+        font-size: 250%;
+        padding: 1vw 0;
+    }
+
+    .info {
+        font-size: 125%;
+        font-weight: 600;
+    }
+    
+    .button-read-more{
+        font-size: 120%;
+        padding: 1.5vh 0;
+        transition: .25s ease-in-out; 
+    }
+}
+
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    nav ul li a {
+        font-size: 125%;
+    }
+    
+    .title{
+       font-size: 600%; 
+    }
+    
+    .sub-title, .button-read-more, .info {
+        font-size: 150%;
+    } 
+
+    .body-text, .today, input, textarea, .cite {
+        font-size: 125%;
+        line-height: 150%;
+        padding: .5vw ;
+    }
+    
+    .name{
+        font-size: 350%;
+        padding: .5vw 0;
+    }  
+}   
+
+
+/* === 4K+ Wide Desktop === */
+@media only screen and (min-width: 3600px){
+    nav ul li a {
+        font-size: 200%;
+    }
+    
+    .title{
+       font-size: 900%; 
+    }
+    
+    .sub-title, .button-read-more, .info {
+        font-size: 225%;
+    }
+    
+    .body-text, .today, input, textarea, .cite {
+        font-size: 180%;
+        line-height: 150%;
+        padding: .5vw ;
+    }
+    
+    .name{
+        font-size: 3.5rem;
+        padding: .5vw 0;
+    }   
+}
+/* ========================= GLOBAL ICON STYLES =========================*/
+/* === Mobile ===*/
+.icon-small{
+    display: block;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    content: '';
+    background-size: cover; /* use px or 'cover' to fill */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    
+.icon-large{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    content: '';
+    background-size: 40px; /* use px or 'cover' to fill */
+    background-repeat: no-repeat;
+    background-position: center;    
+} 
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) { 
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    .icon-large{
+        background-size: cover; /* use px or 'cover' to fill */  
+    } 
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    .icon-small{
+        width: 1.25vw;
+        height: 1.25vw;
+    }
+    
+    .icon-large{
+        width: 2vw;
+        height: 2vw;
+        background-size: 2vw; /* use px or 'cover' to fill */   
+    }
+}  
+
+/* ========================= BACKGROUND ========================= */ 
+/* === Mobile ===*/
+body {
+    background-color: #111E2B; 
+}
+
+/* === Tablet ===*/  
+@media only screen and (min-width: 800px) {
+    body {
+/*
+        background: url(../../assets/images/Terrain1600.jpg);
+        background-size: cover;
+        background-attachment: fixed;   
+*/
+        background-color: rgba(245,249,252,1);
+    }
+}
+
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    body {
+        background: url(../../assets/images/Terrain.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: screen;
+        background-color: rgba(245,249,252,0.9); 
+    }
+}
+/* ========================= HEADER ========================= */
+/* === Mobile ===*/
+#header{
+    display: block;
+    background-color: #F5F9FC;
+    width: 100vw;
+    height: 39px;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #B3811A;
+    box-shadow: 0 2px 10px rgba(17,30,43,.75);
+    z-index: 3;
+}
+
+#header-content { 
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 800px) {
+    #header { 
+        background-color: rgba(244,248,253,0.9);
+        box-shadow: 0 0 25px rgba(17,30,43,0.5);
+    }  
+    
+    #header-content { 
+        justify-content: inherit;
+    }
+}
+
+/* === Desktop ===*/ 
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #header{
+        height: calc(2vw - 1px);
+    }
+}
+
+/* ========================= LOGO SMALL ========================= */
+/* === Mobile ===*/
+#logo-small {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 18pt;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 800px){
+    #logo-small {
+        width: 10vw;
+        max-width: 70px;
+        height: 50%;
+        position: relative;
+        left: 4vw;
+        border-right: 2px solid #B3811A;
+        padding: 0 15px 0 25px;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    #logo-small {
+        width: 70px;
+        left: 40px;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #logo-small{
+        font-size: 2.5em;
+        width: 3vw;
+        max-width: none;
+        left: 2vw;
+    }
+}
+
+
+/* ========================= HEADER NAVIGATION MENU ========================= */
+/* === Mobile ===*/
+#headerNav {
+        display: none;
+}
+
+/* === Tablet ===*/
+@media only screen and (min-width: 800px) {
+    #headerNav {
+        display: inherit;
+        width: 0px; /*grow effect*/
+        position: relative;
+        left: 5vw;
+        overflow: hidden;
+    }
+    
+    #headerNav.closed {
+        width: inherit;
+    }
+    
+    #headerNav nav ul {
+        display: flex;
+    }
+    
+    #headerNav nav ul li a {
+        background-color: rgb(0, 0, 0, 0);
+        padding: 4px 0px; 
+        -webkit-transition: 1.0s; /* Chrome, Safari */
+        -moz-transition: 1.0s; /*  Firefox */
+        -o-transition: 1.0s; /*  Opera */
+        transition: 1.0s;
+    }
+    
+    #headerNav.closed nav ul li a {
+        padding: 4px 1vw;
+        -webkit-transition: .5s; /* Chrome, Safari */
+        -moz-transition: .5s; /*  Firefox */
+        -o-transition: .5s; /*  Opera */
+        transition: .5s;
+    }
+    
+    #headerNav.closed ul li a:hover {
+        color: #F5F9FD;
+        background-color: #B3811A;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    #headerNav {
+        left: 50px;
+    }
+    
+    #headerNav.closed nav ul li a {
+        padding: 4px 0.5vw;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #headerNav{
+       left: 3vw; 
+    }
+}
+
+/* ========================= FOLLOW ME ICONS SMALL ========================= */
+/* === Mobile ===*/
+#follow-me-header-small {
+        display: none;
+}
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) {
+    #follow-me-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        position: absolute;
+        right: 2vw;
+    }
+    
+    #follow-me-header-wrapper a{
+        display: inline-block;
+        background-color:  #111E2B;
+        opacity: 0.75;
+        border-radius: 3px;
+        -webkit-transition: .25s; /* Chrome, Safari */
+        -moz-transition: .25s; /*  Firefox */
+        -o-transition: .25s; /*  Opera */
+        transition: .25s;   
+    }
+
+    #follow-me-header-wrapper a:hover{
+        background-color: #B3811A;
+        opacity: 1.0;
+    }
+    
+    #follow-me-header-wrapper a:nth-child(1) .icon-small{
+        background-image: url('../../assets/images/FacebookIcon.png')}
+    #follow-me-header-wrapper a:nth-child(2) .icon-small{
+        background-image: url('../../assets/images/LinkedinIcon.png')}
+    #follow-me-header-wrapper a:nth-child(3) .icon-small{
+        background-image: url('../../assets/images/WordpressIcon.png')}
+    #follow-me-header-wrapper a:nth-child(4) .icon-small{
+        background-image: url('../../assets/images/PinterestIcon.png')}
+    #follow-me-header-wrapper a:nth-child(5) .icon-small{
+        background-image: url('../../assets/images/GitHubIcon.png')}
+    #follow-me-header-wrapper a:nth-child(6) .icon-small{
+        background-image: url('../../assets/images/GrasshoopperIcon.png')}  
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){ 
+    #follow-me-header-wrapper {
+        right: 50px;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #follow-me-header-wrapper {
+        width: 10vw;
+        right: 2.5vw;
+    }
+}
+
+
+/* ==================== LOGO LARGE ====================*/
+/* === Mobile preview === */
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) {
+    #logo-large{
+        display: block;
+        width: 289px;
+        height: 20vh;
+        position: fixed;
+        top: 0;
+        left: 40px;
+        background: url(../../assets/images/tedseven-logo.png);
+        background-color: #F5F9FD;
+        background-size: 20vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-right: 1px solid #B3811A;
+        transition: .25s ease-in-out; 
+    }
+    
+    #logo-large.closed{
+        width: 0px;
+    }
+}
+/* === Desktop === */
+@media only screen and (min-width: 1600px){  
+    #logo-large{
+        width: 359px;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){  
+    #logo-large{
+        height: 20vh;
+        width: calc(20vw - 1px);
+        background-size: 12vw;
+        left: 2vw;
+    }
+}
+
+/* ========================= SIDEBAR NAVIGATION MENU ========================= */
+/* === Mobile ===*/
+#sideBarNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 25px;
+    top: 40px;
+    left: 0px;
+    overflow: hidden;
+    background-color: #B3811A; 
+    -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+    -moz-transition: .25s ease-in-out; /*  Firefox */
+    -o-transition: .25s ease-in-out; /*  Opera */
+    transition: .25s ease-in-out;
+    box-shadow: 0 3px 5px rgba(17,30,43,0.75);
+}
+
+#sideBarNav.closed {
+    height: 0px;
+}
+
+#sideBarNav ul li a {
+    color: #F5F9FD;
+    background-color: #B3811A; 
+}
+
+#sideBarNav nav ul {
+    display: flex;
+}
+    
+/* === Tablet ===*/
+@media only screen and (min-width: 800px) {
+    #sideBarNav {
+        width: 289px;
+        height: 20px;
+        top: 20vh;
+        left: 40px;
+        box-shadow: none;
+        background-color: transparent;
+        border-right: 1px solid #B3811A;
+    }
+    
+    #sideBarNav.closed {
+        width: 0px;
+    }
+    
+    #sideBarNav nav {
+        width: 100%;
+    }
+    
+    #sideBarNav nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #sideBarNav ul li {
+        flex: 1;
+    }
+    
+    #sideBarNav .NavButton {
+        text-align: center;
+        color: inherit;
+        border-bottom: 1px solid #B3811A;
+        background-color: #F5F9FD; 
+        -webkit-transition: .25s ; /* Chrome, Safari */
+        -moz-transition: .25s; /*  Firefox */
+        -o-transition: .25s; /*  Opera */
+        transition: .25s;
+    }
+ 
+/* INSIDE smoothScroll.js */    
+    #sideBarNav .NavButton:hover {
+        color: #F5F9FD;
+        background-color: #B3811A;   
+    }
+    
+    #sideBarNav .NavButton:focus{
+        color: #F5F9FD;
+        background-color: #283440;
+        border: 1px solid #B3811A;
+        border-bottom: 0px solid #B3811A;
+    }
+   
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){  
+    #sideBarNav {
+        width: 359px;
+        height: 25px;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){ 
+    #sideBarNav {
+        width: calc(20vw - 1px);
+        height: 2.5vh;
+        top: 20vh;
+        left: 2vw;
+        align-items:flex-end;
+        background-color: #F5F9FD;
+    }
+}
+
+/* ==================== HAMBURGER MENU ICON ====================*/
+/* === Mobile ===*/ 
+/* === Laptop and tablet === */ 
+/* === Desktop === */
+/* Hamburger Icon */
+#nav-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #b3811a;
+    width: 40px;
+    height: 40px;  
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 10px;
+    -webkit-transform: rotate(0deg); /* Chrome, Safari 10.1+ */
+    -moz-transform: rotate(0deg); /*  Firefox */
+    -o-transform: rotate(0deg); /*  Opera */
+    transform: rotate(0deg);
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #f5f9fd;
+    opacity: 1;
+    left: 0;
+    -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+    -moz-transition: .25s ease-in-out; /*  Firefox */
+    -o-transition: .25s ease-in-out; /*  Opera */
+    transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 8px;
+    -webkit-transform: rotate(45deg); /* Chrome, Safari 10.1+ */
+    -moz-transform: rotate(45deg); /*  Firefox */
+    -o-transform: rotate(45deg); /*  Opera */
+    transform: rotate(45deg);
+}
+
+.nav-icon span:nth-child(3) {
+    top: 8px;
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari 10.1+ */
+    -moz-transform: rotate(-45deg); /*  Firefox */
+    -o-transform: rotate(-45deg); /*  Opera */
+    transform: rotate(-45deg);
+}
+
+.nav-icon span:nth-child(4) {
+    top: 8px;
+    width: 0%;
+    left: 50%;
+}
+
+.nav-icon.closed span {
+    -webkit-transform: rotate(0deg); /* Chrome, Safari 10.1+ */
+    -moz-transform: rotate(0deg); /*  Firefox */
+    -o-transform: rotate(0deg); /*  Opera */
+    transform: rotate(0deg);
+    left: 0;
+}
+
+.nav-icon.closed span:nth-child(1) {
+    top: 0px;
+    width: 100%;
+}
+
+.nav-icon.closed span:nth-child(4) {
+    top: 16px;
+    width: 100%;
+}
+
+/* === Laptop and tablet === */ 
+@media only screen and (min-width: 800px) {
+    #nav-wrapper {
+        right: inherit; 
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #nav-wrapper {
+        width: 2vw;
+        height: 2vw;  
+    }
+    
+    .nav-icon {
+        width: 1vw;
+        height: 1vw;
+        float: left;
+        margin: 0.5vw;
+    }
+    
+    .nav-icon span {
+        height: 0.2vw;
+    }
+    
+    .nav-icon span:nth-child(1), .nav-icon span:nth-child(2), .nav-icon span:nth-child(3), .nav-icon span:nth-child(4) {
+        top: 0.4vw;
+    }
+
+    .nav-icon.closed span:nth-child(1) {
+        top: 0px;
+    }
+
+    .nav-icon.closed span:nth-child(4) {
+        top: 0.8vw;
+    }
+}
+
+/* =========================  MAIN CONTENT =========================*/
+
+/* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
+/* === Mobile ===*/ 
+#sidebar-button{
+    position: relative;
+    z-index: 4;   
+}
+
+.infoBar{
+    max-width: 450px;
+    margin: 0 auto;
+} 
+
+/* === Tablet ===*/ 
+@media only screen and (min-width: 800px){
+    #main-content{
+        display:grid;
+        grid-template-columns: 40px auto;
+        grid-template-rows: auto;
+/* INSIDE INVIDIVIDUAL PAGE STYLE SHEET
+        grid-template-areas: 
+            "sidebar-button intro"
+            "sidebar-button projects"
+            "sidebar-button blog"
+            "sidebar-button contact";   
+*/
+    }
+
+    #sidebar-button{
+        grid-area: sidebar-button;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(17,30,43,1);
+        position: relative;
+        cursor: pointer;
+        z-index: 3;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+    
+    #sidebar-button:hover {
+        background-color: #B3811A;
+    }
+
+    #intro{
+        grid-area: intro;
+        display: flex;
+    }
+
+    #projects{
+        grid-area: projects;
+        display: flex;
+    }
+    
+    #blog{
+        grid-area: blog;
+        display: flex;
+    }
+    
+    #contact{
+        grid-area: contact;
+        display: flex;
+    }
+
+    .sidebar{
+        width: 289px;
+        max-height: 100vh;
+        z-index: 2;
+        position: relative;
+        background-color: rgba(17,30,43,0.9);
+        border-right: 1px solid #B3811A;
+        overflow: hidden;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out; 
+    }
+
+    .sidebar.closed{
+        width: 0px;
+        padding: 0;
+    }
+
+    .content{
+        flex: 1;
+        -webkit-transition: .25s ease-in-out; /* Chrome, Safari */
+        -moz-transition: .25s ease-in-out; /*  Firefox */
+        -o-transition: .25s ease-in-out; /*  Opera */
+        transition: .25s ease-in-out;
+    }
+    
+    .infoBar{
+        max-width: none;
+        margin: none;
+        height: 100vh;
+        max-height: 50vw;
+        padding: 25vh 15px calc((15px*2) + 18px);
+    }   
+}  
+
+ /* === Desktop  ===*/ 
+@media only screen and (min-width: 1600px){
+    .sidebar{
+        width: 359px;   
+    }
+}
+    
+/* === 2K+ Wide Desktop  ===*/ 
+@media only screen and (min-width: 2400px){
+    #main-content{
+        grid-template-columns: 2vw auto;
+    }
+    
+    .sidebar{
+        width: calc(20vw - 1px);
+    }
+    
+    .infoBar{
+        max-width: 17.5vw;
+        padding: 25vh 0 0;
+    }
+}

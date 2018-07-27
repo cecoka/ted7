@@ -1,0 +1,288 @@
+/*MY CODE*/ 
+/* ===================== COLOUR CODES ===================== */
+/*
+ORANGE = #B3811A  rgba(179,129,26,1)
+BRIGHTEST BLUE = #F5F9FC  rgba(245,249,252,1)
+DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1) 
+*/
+
+/* ===================== TEXT STYLES ===================== */
+/* === Mobile === */
+/* Title */
+.button-read-more {
+    background-color: #B3811A;
+}
+
+.pc{
+    display: none;
+}
+
+/* Links */
+#cv a{
+    text-decoration: none;
+    color: #111E2B;
+}
+
+#dsa ul{
+    display: inline-block;
+    text-align: left;
+    list-style-type:circle;
+}
+
+#dsa ul li{
+    margin: 0 5vw;
+}
+
+.competitions ul li{
+    padding: 10px 0;
+}
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) {
+    .mobile{
+        display: none;
+    }
+    
+    .pc{
+        display: block;
+    }
+    
+    #cv a:hover{
+        text-decoration: underline;
+    }
+    
+    .button-read-more {
+        background-color: rgba(29,68,112,1);
+    }
+    
+    #dsa ul li{
+        margin: 0 0 0 2vw;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    .body-text{
+        line-height: 140%;
+    }
+    
+    .competitions ul li{
+        padding: 1vh;
+    }
+}
+
+/* ========================= BACKGROUND ========================= */ 
+/* === Mobile ===*/
+body {
+    background-color: #111E2B; 
+    overflow: hidden;
+}
+
+/* === Tablet ===*/  
+@media only screen and (min-width: 800px) {
+    body {
+        background: url(../../assets/images/Terrain1600.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: screen;
+        background-color: rgba(245,249,252,1); 
+    }
+}
+
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    body {
+        background: url(../../assets/images/Terrain.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: screen;
+        background-color: rgba(245,249,252,0.9);     
+    }
+}
+
+/* =========================  MAIN CONTENT =========================*/
+
+/* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
+/* === Tablet ===*/ 
+@media only screen and (min-width: 800px){
+    #main-content{
+        display:grid;
+        grid-template-areas: 
+            "sidebar-button intro";        
+    }
+}  
+
+/* ==================== 1. SECTION ONE ====================*/
+/* ==================== 1.1 BRIEF INTRO ====================*/
+/* === Mobile preview === */   
+
+#intro-info h2, #cv h2{
+    border-bottom: 1px solid #B3811A;
+    height: 5vh;
+    max-height: 30px;
+    margin: 10px 10% 0; 
+}
+
+#intro-info h2, #cv h2{
+    border-bottom: 1px solid #B3811A;
+}
+
+/* === Laptop and tablet === */ 
+@media only screen and (min-width: 800px) {
+    #intro-info h2, #cv h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3vh;
+        max-height: none;
+        margin: 0 1vw; 
+    }
+    
+    #intro-info .title{
+        text-align: right;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    #intro-info h2, #cv h2{
+        margin: 2vh 1vw 0; 
+    } 
+}
+
+
+/* ==================== 1.2 CV ====================*/
+#cv {
+    background-color: #F5F9FC;
+}
+
+#cv .title , #cv .sub-title , #cv .body-text{
+    color: #111E2B;
+}
+
+.subtab{
+    margin: 2vh 10%;
+    border-bottom: 1px dotted #B3811A;
+}
+
+.subtab .body-text{
+    padding: 1vh 0;
+}
+
+/* === Laptop and tablet === */ 
+@media only screen and (min-width: 800px) {
+    #cv {
+        background-color: transparent;
+    }
+    
+    #cv .title{
+        text-align: left;
+    }
+    
+    #cv h2{
+        border-bottom: 1px solid #B3811A;
+    } 
+    
+    #dsa p, #ntd p, #la p, .personal p{
+        text-align: left;
+    } 
+
+    .content{
+        padding: 25vh 15px 0;
+    }  
+    
+    #cv-info{
+        height: 70vh;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-areas: 
+            "me experience competitions"
+            "education experience competitions"
+            "proficiency experience ."
+            "personal experience .";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        grid-column-gap: 0.5vw;
+        position: relative;
+    }
+    
+/*
+    .tab{
+        border: 1px solid; 
+    }
+*/
+    
+    .current{
+        grid-area: me;
+    }
+    
+    .education{
+        grid-area: education;
+    }
+    
+    .proficiency{
+        grid-area: proficiency;
+    }
+    
+    .experience{
+        grid-area: experience;
+    }
+
+    .competitions{
+        grid-area: competitions;
+    }
+    
+    .personal{
+        grid-area: personal;
+    }
+    
+    #xp-wrapper{
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+    }
+    
+    .subtab{
+        margin: 0 0 2vh;
+        border-bottom: none;
+    }
+
+    .subtab .body-text{
+        padding:.5vw;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    .content{
+        padding: 25vh 0.75vw 0;
+    }
+    
+    #cv-info{
+        height: 58vh;
+        overflow-y: hidden;
+        display: grid;
+        grid-template-areas: 
+            "me experience competitions"
+            "education experience competitions"
+            "proficiency experience ."
+            "personal experience .";
+        grid-template-columns: 300px 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-column-gap: 0.5vw;
+        position: relative;
+    }
+    
+    #dsa p, #ntd p, #la p, .personal p{
+        text-align: justify;
+    }
+}
+
+/* === 2K+ Wide Desktop === */
+@media only screen and (min-width: 2400px){
+    #cv-info{
+        grid-template-columns: 15vw 3fr 2fr;
+    }
+    
+}

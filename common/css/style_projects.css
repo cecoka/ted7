@@ -1,0 +1,341 @@
+/*MY CODE*/ 
+/* ===================== COLOUR CODES ===================== */
+/*
+ORANGE = #B3811A  rgba(179,129,26,1)
+BRIGHTEST BLUE = #F5F9FC  rgba(245,249,252,1)
+DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1) 
+*/
+
+/* ===================== TEXT STYLES ===================== */
+/* === Mobile === */
+/* Title */
+.button-read-more {
+    background-color: #B3811A;
+}
+
+.pc{
+    display: none;
+}
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) {
+    .mobile{
+        display: none;
+    }
+    
+    .pc{
+        display: block;
+    }
+    
+    .button-read-more {
+        background-color: rgba(29,68,112,1);
+    }
+}
+
+/* =========================  MAIN CONTENT =========================*/
+/* =========================  IMG LINKS =========================*/
+/* ARCHITECTURE */
+#paleo {background-image: url('../../projects/design/1806-paleo/preparation.jpg');}
+#tiny {background-image: url('../../projects/design/1601-tiny-homes/th-kitchen.jpg');}
+#tree {background-image: url('../../projects/design/1511-treehousing/Durban%20FI.png');}
+#voro {background-image: url('../../projects/design/1406-vonoi/Sec.jpg');}
+
+/* VISUALS */
+#bic  {background-image: url('../../projects/visuals/1609-bic/bic-02.jpg');}
+#dsa3  {background-image: url('../../projects/visuals/1605-freehold/semi-det-house.jpg');}
+#dsa2  {background-image: url('../../projects/visuals/1511-manor/dsa-manor.jpg');}
+#dsa1  {background-image: url('../../projects/visuals/1511-lilly/dsa-lilly.jpg');}
+#villa  {background-image: url('../../projects/visuals/1506-villa/villa-night.jpg');}
+#ntd2  {background-image: url('../../projects/visuals/1412-pompilio/pompilio.png');}
+#hos  {background-image: url('../../projects/visuals/1411-honsinzi/hosinzi-exterior.png');}
+#ntd1  {background-image: url('../../projects/visuals/1404-preston/ntd-preson-bus-station-02.png');}
+
+/* CODING */
+#zha  {background-image: url('../../projects/coding/1505-kartal/extrude-proximity.jpg');}
+#meta  {background-image: url('../../projects/coding/1504-meta/Metaball%20Composite.png');}
+
+
+/* ====================== MAIN CONTENT LAYOUT (GRID ) ======================*/
+/* === Tablet ===*/ 
+@media only screen and (min-width: 800px){
+    #main-content{
+        grid-template-areas: 
+            "sidebar-button projects"
+    }
+    
+    #sidebar-button{
+        width: 40px;
+        position: fixed;
+        left: 0;
+    }
+    
+    .sidebar{
+        position: fixed;
+        height: 100vh;
+    }
+    
+    #gallery{
+        position: absolute;
+        right: 0;
+        width: calc(100% - (330px + 4vw)); /* calc(100% - ((button & sidebar) + margin*/
+    }
+    
+    #gallery.open{
+        width: calc(100% - (40px + 4vw)); /* calc(100% - (button + margin)*/
+    }
+} 
+
+ /* === Desktop  ===*/ 
+@media only screen and (min-width: 1600px){
+    #gallery{ 
+        width: calc(100% - (400px + 4vw)); /* calc(100% - ((button & sidebar) + margin))*/
+    }
+    
+    #gallery.open{
+        width: calc(100% - (40px + 4vw)); /* calc(100% - (sidebutton + margin)*/
+    }
+}
+
+/* === 2K+ Wide Desktop  ===*/ 
+@media only screen and (min-width: 2400px){ 
+    #sidebar-button{
+        width: 2vw;
+    }
+    
+    #gallery{
+        width: calc(78% - 4vw); /* calc(100% - ( 20vw sidebar + 2vw sidebutton + margin)*/
+    }
+    
+    #gallery.open{
+        width: calc(100% - (2vw + 4vw)); /* calc(100% - (sidebutton + margin)*/
+    }
+}
+
+/* ==================== 2. SECTION TWO ====================*/
+/* ==================== 2.1 PROJECTS INFO ====================*/
+/* === Mobile preview === */
+#projects .tab a  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    max-height: 30px;
+    margin: 10px 10% 0;
+    border: 1px solid #B3811A;
+    background-color: rgba(17,30,43,0.5);
+    -webkit-transition: 0.2s; /* Chrome, Safari */
+    -moz-transition: 0.2s; /* Firefox */
+    -o-transition: 0.2s; /* Opera */
+    transition: 0.2s;
+    } 
+
+#projects .tab a:hover {
+    background-color: #B3811A;
+    }
+
+#projects .sub-title {
+    border-bottom: none;
+    } 
+
+#projects .tab a .icon-small {
+        margin: 0 2.5%;
+    }
+
+.tab:nth-child(2) a .icon-small{
+    background-size: 80%;
+    background-image: url('../../assets/images/ArchIcon.png')}
+.tab:nth-child(3) a .icon-small{
+    background-image: url('../../assets/images/RenderIcon.png')}
+.tab:nth-child(4) a .icon-small{
+    background-image: url('../../assets/images/DigitalIcon.png')}
+
+#projects .button-read-more{
+    display: none;
+}
+
+
+/* === Laptop and Tablet === */
+@media only screen and (min-width: 800px) {
+    #projects .tab a  { 
+        height: 3vh;
+        margin: 0 5%;
+    }
+    
+    #projects .tab a:focus  { 
+        background-color: #B3811A;
+    }
+    
+    #projects .tab a .icon-small {
+        margin: 0 2.5%;
+        width: 15px;
+        height: 15px;
+    }
+    
+    #projects .button-read-more{
+        display: block;
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    #projects .tab a  { 
+        height: 3vh;
+        max-height: none;
+        margin: 5% 5% 0;
+    }
+    
+    #projects .tab a:active {
+        margin: 5% 15% 0;
+    }
+    
+    #projects .tab a .icon-small {
+        margin: 0 2.5%;
+        width: 1vw;
+        height: 1vw;
+    }
+}
+
+/* ==================== 2.2 PROJECTS GALLERY ====================*/
+/* === Mobile preview === */
+#gallery{
+    display: grid;
+    grid-auto-rows: 30vh;
+    grid-gap: 10px;
+    margin: 10% 10px;
+}
+
+.project-thumbnail{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    position: relative;
+    content: '';
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: inset 0 0 125px rgba(17,30,43,0.85);
+    z-index: 1;
+}
+
+.thumbnail-img{
+    flex: 1;
+    height: 100%;
+}
+
+.project-thumbnail .invisible-link{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-decoration: none;
+    z-index: 2;
+    color: #F5F9FC;
+    opacity: 1;
+    background-color: rgba(179,129,26,0.8);
+}
+
+#gallery .button-read-more{
+    display: block;    
+}
+
+/* === Tablet Portrait === */
+@media only screen and (min-width: 450px){
+    #gallery{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin: 10% 5%;
+    }
+}
+
+/* === Laotop and Tablet === */
+@media only screen and (min-width: 800px){
+    #gallery{
+        grid-auto-rows: 25vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        grid-gap: 2vw;
+        margin: calc(40px + 2vw) 2vw 2vw;
+    }
+    
+    #gallery.open{
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    #gallery .project-thumbnail{
+        border: 1px solid #B3811A;
+    }
+    
+    .double{
+        grid-row: span 2;
+        grid-column: span 2; 
+    }
+    
+    .long{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+    
+    .tall{
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+    
+    .small{
+        grid-row: span 1;
+        grid-column: span 1; 
+    } 
+    
+    #gallery .button-read-more{
+        display: none;
+    }
+}
+/* === Desktop === */
+@media only screen and (min-width: 1600px){
+    #gallery{
+        grid-auto-rows: 21vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1vw;
+        margin: 4vw 2vw 2vw;
+        transition: all 0.25s ease-in-out;
+    }
+    
+    #gallery.open{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .project-thumbnail:hover{
+        background-color: rgba(179,129,26,1.0);
+        background-blend-mode: soft-light;
+    }
+    
+    .project-thumbnail .thumbnail-img{
+        -webkit-transition: 0.35s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.35s ease-in-out; /* Firefox */
+        -o-transition: 0.35s ease-in-out; /* Opera */
+        transition: 0.35s ease-in-out;
+    }
+
+    .project-thumbnail:hover .thumbnail-img{
+        filter: blur(3px);
+        -webkit-transform: scale(1.05); /* Chrome, Safari */
+        -moz-transform: scale(1.05); /* Firefox */
+        -o-transform: scale(1.05); /* Opera */
+        transform: scale(1.05);
+    }
+
+    .project-thumbnail .invisible-link{
+        bottom: inherit;
+        text-decoration: none;
+        z-index: 2;
+        opacity: 0;
+        background-color: transparent;
+        -webkit-transition: 0.35s ease-in-out; /* Chrome, Safari */
+        -moz-transition: 0.35s ease-in-out; /* Firefox */
+        -o-transition: 0.35s ease-in-out; /* Opera */
+        transition: 0.35s ease-in-out;
+    }
+
+    .project-thumbnail:hover .invisible-link{
+        opacity: 1;
+    }
+}
