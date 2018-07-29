@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TED7 - Home </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Raleway:300,400,500,600,700,800&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="common/css/style_general.css">
+        <link rel="stylesheet" href="common/css/style_home.css">
+        <link rel="stylesheet" href="common/css/loading_screen.css">
+        <script src="common/scripts/toggleSideMenu.js"></script>
+        <script src="common/scripts/loader.js"></script>
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+        <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    </head>
+    <body>
+        <div id="loadingScreen">
+            <div id="loader"></div>
+            <div id="loaderLogo"></div>
+
+        </div>
+        <!-- === Start Page Header === -->
+        <header id="header">
+            <div id="header-content">
+                <a href="index.html" id="logo-small">
+                    <font color="#1D4470">ted</font><font color="#B3811A">7</font></a>
+                <div id="headerNav">
+                    <nav role="navigation" aria-label=”Main menu”>
+                        <ul>
+                            <li><a onclick="toTop(); return false;"
+                                   class="NavButton" href="#intro">Intro</a></li>
+                            <li><a onclick="initScroll('projects'); return false;"
+                                   class="NavButton" href="#projects">Projects</a></li>
+                            <li><a onclick="initScroll('blog'); return false;"
+                                   class="NavButton" href="#blog">Blog</a></li>
+                            <li><a onclick="initScroll('contact'); return false;"
+                                   class="NavButton" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div id="follow-me-header-wrapper">
+                    <a href="#"><div class="icon-small"></div></a>
+                    <a href="#"><div class="icon-small"></div></a>
+                    <a href="#"><div class="icon-small"></div></a>
+                    <a href="#"><div class="icon-small"></div></a>
+                    <a href="#"><div class="icon-small"></div></a>
+                    <a href="#"><div class="icon-small"></div></a>
+                </div>
+                
+                <div id="logo-large">
+                    <a href="index.html" class="invisibleLink"></a>
+                </div>
+                
+                <div id="sideBarNav">
+                    <nav role="navigation" aria-label=”Main menu”>
+                        <ul>
+                            <li><a onclick="toTop(); return false;"
+                                   class="NavButton" href="#intro" data="0">Intro</a></li>
+                            <li><a onclick="initScroll('projects'); return false;"
+                                   class="NavButton" href="#projects" data="0">Projects</a></li>
+                            <li><a onclick="initScroll('blog'); return false;"
+                                   class="NavButton" href="#blog" data="0">Blog</a></li>
+                            <li><a onclick="initScroll('contact'); return false;"
+                                   class="NavButton" href="#contact" data="0">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div> 
+        </header>
+        <!-- === End Page Header === -->
+        
+        <!-- === Start Main Content === -->
+        <main id="main">
+            <div id="main-content">
+                <!-- === Sidebar button  === -->
+                <div id="sidebar-button" class="sidebar-button" onclick="toggleSideMenu()">
+                    <div id="nav-wrapper">
+                        <div id="nav-icon" class="nav-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                     </div>
+                </div> 
+
+                <!-- === Intro  === -->
+                <section id="intro">
+                    <div id="intro-info" class="sidebar">
+                        <div id="mobile-banner"></div>
+                        
+                        <div class="infoBar">
+                            <h1 class="title">Intro</h1>
+                            
+                            <div class="tab journey">
+                                <h2 class="sub-title">The journey</h2>
+                                <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            
+                            <div class="tab vision">
+                                <h2 class="sub-title">The vision</h2>
+                                <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+
+                            <div class="tab tools">
+                                <h2 class="sub-title">The tools</h2>
+                                <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div> 
+                        
+                        <a href="about.html" class="button-read-more">Read About Me</a>
+                    </div>
+                    
+                    <div id="banner" class="content"> 
+                        <!-- A-Frame 360 VR Panorama plugin -->
+                        <a-scene class="aframebox" vr-mode-ui="enabled: false" embedded>
+                            <a-assets>
+                                <img id="Paleo1" crossorigin="anonymous" 
+                                     src="projects/design/1806-paleo/Prep360.jpg"> 
+                                <img id="Paleo2" crossorigin="anonymous" 
+                                     src="projects/design/1806-paleo/Collection360.jpg" >
+                            </a-assets>
+                            
+                            <!-- Invert Mouse Drag -->
+                            <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+                            
+                            <!-- 360-degree image. -->
+                            <a-sky id="image-360" radius="100" src="#Paleo1">
+                                <a-animation attribute="rotation" easing="linear" dur="750000" to="0 360 0" repeat="indefinite"></a-animation>
+                            </a-sky> 
+                            
+                            <!-- Image links. -->
+                            <div id="links"> 
+                                <button class="setVRimg" src="#Paleo1"></button>
+                                <button class="setVRimg" src="#Paleo2"></button>
+                            </div>
+                        </a-scene>
+                        
+                        <script src="common/scripts/set360image.js"></script>
+                    </div>
+                </section>
+                
+                <!-- === Projects  === -->
+                <section id="projects">
+                    <div id="projects-info" class="sidebar">
+                        <div class="infoBar">
+                            <h1 class="title">Projects</h1>
+                            <div class="tabs">
+                                <div class="tab design">
+                                    <h2 class="sub-title">Architecture</h2>
+                                    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+
+                                <div class="tab visuals">
+                                    <h2 class="sub-title">Visualisations</h2>
+                                    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+
+                                <div class="tab coding">
+                                    <h2 class="sub-title">Digital Design</h2>
+                                    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <a href="projects.html" class="button-read-more">see all projects</a>
+                    </div>
+                    
+                    <div id="gallery" class="content">
+                        <div class="project-thumbnail">
+                              <div class="thumbnail-img"></div>
+                              <a href="#" class="invisible-link">
+                                  <h3 class="name">Auditorio Pompilio Martinez</h3>
+                                  <p class="info">NTD / 2014 / Visual</p>
+                              </a>
+                        </div>
+                        <div class="project-thumbnail">
+                              <div class="thumbnail-img"></div>
+                              <a href="#" class="invisible-link">
+                                  <h3 class="name">Tiny Home</h3>
+                                  <p class="info"> DSA / 2016 / Architecture / Competition</p>
+                              </a>
+                        </div>
+                        <div class="project-thumbnail">
+                              <div class="thumbnail-img"></div>
+                              <a href="#" class="invisible-link">
+                                  <h3 class="name">Kartal Pendik Masterplan </h3>
+                                  <p class="info">ZHA / 2016 / Digital Design</p>
+                              </a>
+                        </div>
+                        <div class="project-thumbnail">
+                              <div class="thumbnail-img"></div>
+                              <a href="#" class="invisible-link">
+                                  <h3 class="name">Paleo-Harvester</h3>
+                                  <p class="info">2018 / Digital Architecture / M.Arch Year I</p>
+                              </a>
+                        </div>
+                        <a href="projects.html" class="button-read-more">See all projects</a>
+                    </div>
+                </section>
+    
+                <!-- === Blog  === -->
+                <section id="blog">
+                    <div id="blog-info" class="sidebar">
+                        <div class="infoBar">
+                            <h1 class="title">Blog</h1>
+                            <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                        </div>
+                        
+                        <a href="#" class="button-read-more">see all posts</a>
+                    </div>
+                    
+                    <div id="blog-posts" class="content">
+                        <article id="post01" class="post">
+                            <div class="blog-img-container"></div>
+                            
+                            <h2><a href="#" class="sub-title">Design Explorer by CORE | Thornton Tomasetti</a></h2>
+
+                            <div class="today"><time datetime="yyyy-mm-dd"><strong>&#9998; 02/01/2018</strong></time></div>
+
+                            <p class="body-text">CORE studio is pleased to announce Design Explorer, an open source tool for exploring design spaces on the web.  We’ve been working on this project on and off for well over a year now and we’ve presented it a number of times, but we’ve never written about it. Shame on us! Over the next few weeks, we will publish a series of blog posts about the project’s goals, the natural history of design space tools in AEC [...]</p>
+
+                            <a href="#" class="button-read-more">Read More &#10095;</a>
+                        </article>
+
+                        <article id="post02" class="post">
+                            <div class="blog-img-container"></div>
+
+                            <h2><a href="#" class="sub-title">The architecture software revolution: From one size fits all to diy</a></h2>
+
+                            <div class="today"><time datetime="yyyy-mm-dd"><strong>&#9998; 12/12/2015</strong></time></div>
+
+                            <p class="body-text">We’ve always been a profession of hackers. Every building is a one-off made up of countless elegant hacks, each bringing disparate materials and systems together into a cohesive whole. But when it comes to the software that designers have come to rely on, most of us have been content with enthusiastic consumerism, eagerly awaiting the next releases  [...]</p>
+
+                            <h3 class="cite">
+                                <a href="http://www.archdaily.com/778619/the-architecture-software-revolution-from-one-size-fits-all-to-diy/">
+                                    <strong>Cite:</strong>
+                                    <p>
+                                        <i>Yan Krymsky. "The Architecture Software Revolution: From One Size Fits All to DIY"</i>     
+                                        <strong>ArchDaily</strong>
+                                    </p>
+                                </a>
+                            </h3>
+
+                            <a href="#" class="button-read-more">Read More &#10095;</a>
+                        </article>
+                        
+                        <article id="post03" class="post">
+                            <div class="blog-img-container"></div>
+
+                            <h2><a href="#" class="sub-title">Post Title 03</a></h2>
+
+                            <div class="today"><time datetime="yyyy-mm-dd"><strong>&#9998; 12/12/2015</strong></time></div>
+
+                            <p class="body-text">We’ve always been a profession of hackers. Every building is a one-off made up of countless elegant hacks, each bringing disparate materials and systems together into a cohesive whole. But when it comes to the software that designers have come to rely on, most of us have been content with enthusiastic consumerism, eagerly awaiting the next releases  [...]</p>
+
+                            <h3 class="cite">
+                                <a href="http://www.archdaily.com/778619/the-architecture-software-revolution-from-one-size-fits-all-to-diy/">
+                                    <strong>Cite:</strong>
+                                    <p>
+                                        <i>Yan Krymsky. "The Architecture Software Revolution: From One Size Fits All to DIY"</i>     
+                                        <strong>ArchDaily</strong>
+                                    </p>
+                                </a>
+                            </h3>
+
+                            <a href="#" class="button-read-more">Read More &#10095;</a>
+                        </article>
+                        
+                        <article id="post04" class="post">
+                            <div class="blog-img-container"></div>
+
+                            <h2><a href="#" class="sub-title">Post Title 04</a></h2>
+
+                            <div class="today"><time datetime="yyyy-mm-dd"><strong>&#9998; 12/12/2015</strong></time></div>
+
+                            <p class="body-text">We’ve always been a profession of hackers. Every building is a one-off made up of countless elegant hacks, each bringing disparate materials and systems together into a cohesive whole. But when it comes to the software that designers have come to rely on, most of us have been content with enthusiastic consumerism, eagerly awaiting the next releases  [...]</p>
+
+                            <h3 class="cite">
+                                <a href="http://www.archdaily.com/778619/the-architecture-software-revolution-from-one-size-fits-all-to-diy/">
+                                    <strong>Cite:</strong>
+                                    <p>
+                                        <i>Yan Krymsky. "The Architecture Software Revolution: From One Size Fits All to DIY"</i>    
+                                        <strong>ArchDaily</strong>
+                                    </p>
+                                </a>
+                            </h3>
+
+                            <a href="#" class="button-read-more">Read More &#10095;</a>
+                        </article>  
+                        <a href="#" class="button-read-more">see all posts</a>
+                    </div>
+                    
+                </section>
+      
+                <!-- === Contact === -->
+                <section id="contact">
+                    <div id="contact-info" class="sidebar">
+                        <div class="infoBar">
+                            <h1 class="title">Get in touch</h1>
+                            
+<!--
+                            <p id="contactCode" class="sub-title"> 
+                                <span><font color="#99ccff">if</font> need4.ArchVisualisation<br/></span>
+                                <span><font color="#99ccff">or</font> project.Discussion<br/></span>
+                                <span><font color="#99ccff">or</font> say ( <font color="#e5a422">''Hi!''</font> ) = <font color="#99ccff"> True </font> :<br/></span>
+                                <span><font color="#99ccff">fill</font> ( contactForm )<br/></span>
+                                <span><font color="#99ccff">send</font>( <font color="#e5a422">''yourMessage''</font> )<br/></span>
+                            </p>
+-->
+                            
+                            <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="contact-details" class="content">
+                        <div id="contact-form" class="contactTab">
+                            <h1 class="name">Contact me</h1>
+                            <!--<p class="body-text">Name*:</p>-->
+                            <input placeholder="Name" type="text">
+                            
+                            <!--<p class="body-text">Email*:</p>-->
+                            <input placeholder="Email &#9993;" type="email ">
+                            
+                            <!--<p class="body-text">Subject*:</p>-->
+                            <input placeholder="What would you like to discuss" type="email">
+                            
+                            <!--<p class="body-text">Message*:</p>-->
+                            <textarea placeholder="Write down your thoughts..." type="text"></textarea>
+                            <a href="#" type="submit" class="button-read-more">Send Message</a>
+                        </div>
+                        
+                        <div id="contactTab2" class="contactTab">
+                            <h1 class="name">Follow Me</h1>
+                            <p class="body-text">I usually prefer to stay of the grid, but for those interested you can find me and my work:</p>
+                            <div id="follow-me-tab-wrapper">
+                                <a href="#"><div class="icon-large"></div><p class="info">Facebook</p></a>
+                                <a href="#"><div class="icon-large"></div><p class="info">LinkedIn</p></a>
+                                <a href="#"><div class="icon-large"></div><p class="info">Wordpress</p></a>
+                                <a href="#"><div class="icon-large"></div><p class="info">Pinterest</p></a>
+                                <a href="#"><div class="icon-large"></div><p class="info">GitHub</p></a>
+                                <a href="#"><div class="icon-large"></div><p class="info">Grasshopper</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            
+        </main>
+        <!-- === End Main Content === -->
+        
+        <!-- === Start Main Footer === -->
+        <footer>
+        </footer>
+        <!-- === End Main Footer === -->
+        
+        <!-- === Additional Scripts === -->
+        
+        <script src="common/scripts/smoothScroll.js"></script>
+    </body>
+</html>      
