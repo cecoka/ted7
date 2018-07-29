@@ -67,6 +67,12 @@ var menuItems = document.getElementById("sideBarNav").getElementsByClassName("Na
 var currentMenuItem = menuItems[0];
 var Section = document.getElementsByTagName("section");
 
+var quarterVH = window.innerHeight*0.25 ;
+
+var secTwoY = Section[1].offsetTop-quarterVH;
+var secThreeY = Section[2].offsetTop-quarterVH;
+var secFourY = Section[3].offsetTop-quarterVH;
+
 onscroll = function selectMenuButton(){
     if (screen.width < 800){}
     else{
@@ -87,23 +93,23 @@ onscroll = function selectMenuButton(){
                 currentMenuItem.style.borderBottom = "0px solid #B3811A";        
             }
 
-            if (window.pageYOffset >= 0 && window.pageYOffset < Section[1].offsetTop){
+            if (window.pageYOffset >= 0 && window.pageYOffset < secTwoY){
                 currentMenuItem = menuItems[0];
                 highlight();
                 currentMenuItem.style.borderLeft = "0px solid #F5F9FD;";
             }
 
-            else if (window.pageYOffset >= Section[1].offsetTop && window.pageYOffset < Section[2].offsetTop){
+            else if (window.pageYOffset >= secTwoY && window.pageYOffset < secThreeY){
                 currentMenuItem = menuItems[1];
                 highlight();
             }
 
-            else if (window.pageYOffset >= Section[2].offsetTop && window.pageYOffset < Section[3].offsetTop){
+            else if (window.pageYOffset >= secThreeY && window.pageYOffset < secFourY){
                 currentMenuItem = menuItems[2];
                 highlight();
             }
 
-            else if (window.pageYOffset <= Section[3].offsetTop){
+            else if (window.pageYOffset <= (secFourY+quarterVH)){
                currentMenuItem = menuItems[3];
                 highlight();
                 currentMenuItem.style.borderRight = "0px solid #F5F9FD;";
