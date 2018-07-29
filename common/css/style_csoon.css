@@ -1,0 +1,71 @@
+/*MY CODE*/ 
+/* ================ COLOUR CODES ================ */
+/*
+ORANGE = #B3811A  rgba(179,129,26,1)
+BRIGHTEST BLUE = #F5F9FC  rgba(245,249,252,1)
+DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1) 
+*/
+
+main{
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%; 
+    align-items: center;
+    justify-content: center;
+}
+
+main vid{
+    display: block;
+    position: relative;
+}
+
+.title {
+    text-transform: uppercase;    
+}
+
+.sub-title {
+    font-weight: 300;
+    text-transform: none;
+    color: rgba(245,249,252,0.75);
+}
+
+.button-read-more{
+    top: 5vh;
+    position: relative;
+    width: 100%;
+    border-radius: 10vw;
+    border-width: inherit;
+}
+
+/* === Laptop and tablet === */
+@media only screen and (min-width: 800px) {
+    .title {
+        font-size: 3.25vh;
+        color: #111E2B;   
+    }
+    
+    .sub-title {
+        font-size: 2.25vh;
+        line-height: 2.25vh;
+        color: rgba(17,30,43,0.5);
+    }
+}
+
+/* === Desktop === */
+@media only screen and (min-width: 1600px) {
+    .title {
+        font-size: 7vh;
+    }
+    
+    .sub-title {
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+    
+    .button-read-more{
+        top: 10vh;
+        cursor: pointer;
+    }
+}
