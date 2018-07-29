@@ -30,13 +30,48 @@ for (i = 0; i < projects.length; i++) {
     
     projects[i].style.order = String(gridOrder);
 }
-
 //  END OF SORTING
 
+// SELECT PROJECT CATEGORY
+var currentCat = document.getElementById("selectedCat");
+var currentCatInfo = document.getElementById("catInfo");
+var categories = document.getElementById("categories");
+var catOption = document.getElementsByClassName("catOption");
+var catOptionIndex ; // index is inside here
+var arrayOfCats = [];
 
+//Open/Close Category Selection 
+currentCat.addEventListener("click", function (){ 
+    currentCat.classList.toggle("open");
+    categories.classList.toggle("open");
+})
 
+//Change Current Category Selection Text   
+for (catOptionIndex = 0; catOptionIndex < catOption.length; catOptionIndex ++) {
+    
+    //Get hash values of all category options
+    arrayOfCats.push(catOption[catOptionIndex].getElementsByTagName("a")[0].hash);
+    
+    //Replace text
+    catOption[catOptionIndex].addEventListener("click", function (){ 
+        var selCat = this.getElementsByTagName("H2")[0].innerHTML;
+        var hashOfCat = this.getElementsByTagName("a")[0].hash;
+        var selCatInfo = document.getElementsByClassName("catInfo");
+        
+        //Get the index of selected category by it's index in the array of all categories
+        var selCatPos = arrayOfCats.indexOf(hashOfCat);
+        
+        //Replace button and information text with selected
+        currentCat.getElementsByTagName("H2")[0].innerHTML = selCat;
+        currentCatInfo.innerHTML = selCatInfo[selCatPos].innerHTML;
+        
+        //Close dropdown on selection
+        categories.classList.remove("open");
+    })
+}   
+//  END OF SELECTION 
 
-//  SHOW ONLY SELECTED PROJECT (BY CATEGORY)
+//  SHOW ONLY SELECTED PROJECTS (BY CATEGORY)
 var arch = document.getElementsByClassName("arch");
 var vis = document.getElementsByClassName("vis");
 var code = document.getElementsByClassName("code");
@@ -95,36 +130,6 @@ window.addEventListener("onload", checkHash);
 window.addEventListener("hashchange", checkHash);
 
 //  END OF SHOW SELECTION
-
-
-
-
-
-////CHANGE BUTTON BACKGROUND COLOUR ON CLICK // TO BE REVIEWED
-//var catButtons = document.getElementsByClassName("tab");
-//var catButtonsIndex ; // index is inside here
-//console.log("catButtons are");
-//console.log(catButtons);
-//
-//for (catButtonsIndex = 0; catButtonsIndex < catButtons.length; catButtonsIndex ++) {
-//    catButtons[catButtonsIndex].addEventListener("click", function (){   
-////        catButtons[catButtonsIndex].style.backgroundColor = "aqua";
-//        console.log(this.childNodes[0]);
-//        console.log(this.selectAllChildren);
-////        console.log(this);
-//    })
-//}
-
-
-
-
-
-
-
-
-
-
-
 
 //  WRITE PROJECT INFO BASED ON HTML PROJECT INFORMATION 
 //
