@@ -111,43 +111,82 @@ DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1)
     }
 }
 
-/* ==================== 2. SECTION TWO ====================*/
 /* ==================== 2.1 PROJECTS INFO ====================*/
 /* === Mobile preview === */
-#projects .tab a  {
+/* === Category Selection === */
+.customSelect{
+    display: block;
+    position: relative;
+    width: 80%;  /* 90% - padding last value === */
+    margin: 5% 10%;
+
+    font-size: 100%;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+#selectedCat{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    max-height: 30px;
-    margin: 10px 10% 0;
-    border: 1px solid #B3811A;
+    position: relative;
+    overflow: hidden;
+
+    padding: .25vh 0 .25vh 10%;
+
     background-color: rgba(17,30,43,0.5);
-    -webkit-transition: 0.2s; /* Chrome, Safari */
-    -moz-transition: 0.2s; /* Firefox */
-    -o-transition: 0.2s; /* Opera */
-    transition: 0.2s;
-    } 
+    border: 1px solid #B3811A;
+}
 
-#projects .tab a:hover {
+#selectedCat:after{
+    content: "\25bc";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .25vh 1vh;
+
+    border-left: 1px solid #B3811A;
+    -webkit-transition: 0.5s; /* Chrome, Safari */
+    -moz-transition: 0.5s; /* Firefox */
+    -o-transition: 0.5s; /* Opera */
+    transition: 0.5s;
+}
+
+#selectedCat.open:after{
+    content: "\25b2";
     background-color: #B3811A;
-    }
+}
 
-#projects .sub-title {
-    border-bottom: none;
-    } 
+#categories{
+    overflow: hidden;
+    height: 0px; 
+    background-color: rgba(17,30,43,0.5);
+    border: 0px solid transparent;   
+}
 
-#projects .tab a .icon-small {
-        margin: 0 2.5%;
-    }
+#categories li{
+    padding: 0 0 0 10%;
+    -webkit-transition: 0.5s; /* Chrome, Safari */
+    -moz-transition: 0.5s; /* Firefox */
+    -o-transition: 0.5s; /* Opera */
+    transition: 0.5s;
+}
 
-.tab:nth-child(2) a .icon-small{
-    background-size: 80%;
-    background-image: url('../../assets/images/ArchIcon.png')}
-.tab:nth-child(3) a .icon-small{
-    background-image: url('../../assets/images/RenderIcon.png')}
-.tab:nth-child(4) a .icon-small{
-    background-image: url('../../assets/images/DigitalIcon.png')}
+#categories li a{
+    color: #F5F9FC;
+}
+
+#categories.open {
+    overflow: none;
+    height: auto; 
+    border: 1px solid #B3811A;
+    border-top-width: 0px ;
+}
+
+#categories li:hover{
+    padding: 0 0 0 15%;
+    background-color: #B3811A;
+}
 
 #projects .button-read-more{
     display: none;
@@ -155,24 +194,15 @@ DARKEST BLUE = #111E2B   rgba(17,30,43,1) rgba(29,68,112,1)
 
 
 /* === Laptop and Tablet === */
-@media only screen and (min-width: 800px) {
-    #projects .tab a  { 
-        height: 3vh;
-        margin: 0 5%;
-    }
-    
-    #projects .tab a:focus  { 
-        background-color: #B3811A;
-    }
-    
-    #projects .tab a .icon-small {
-        margin: 0 2.5%;
-        width: 15px;
-        height: 15px;
-    }
-    
+@media only screen and (min-width: 800px) {  
     #projects .button-read-more{
         display: block;
+    }
+    
+    /* === Category Selection === */
+    .customSelect{
+        width: 90%;  /* 90% - padding last value === */
+        margin: 10% 5%;   
     }
 }
 

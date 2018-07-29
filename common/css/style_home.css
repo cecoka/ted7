@@ -25,10 +25,10 @@
     background-repeat: no-repeat; 
 }    
 
-#intro-info h2{
-    border-bottom: 1px solid #B3811A;
-    height: 5vh;
+#intro-info h2, #projects-info h2{
+    border: 1px solid #B3811A;
     max-height: 30px;
+    padding: 0 0 5px;
     margin: 10px 10% 0; 
 }
 
@@ -39,20 +39,18 @@
         height: inherit;
     }
     
-    #intro-info h2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 3vh;
+    #intro-info h2, #projects-info h2{
+        display: block;
         max-height: none;
-        margin: 0 5%; 
+        padding: 0;
+        margin: 10px 10% 0;
+        background-color: rgba(17,30,43,0.5);
     }   
 }
 
 /* === Desktop === */
 @media only screen and (min-width: 1600px){
-    #intro-info h2{
-        height: 3vh;
+    #intro-info h2, #projects-info h2{
         margin: 2vh 1vw 0; 
     } 
 }
@@ -143,40 +141,23 @@
 /* ==================== 2. SECTION TWO ====================*/
 /* ==================== 2.1 PROJECTS ====================*/
 /* === Mobile preview === */
-#projects .tab a  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    max-height: 30px;
-    margin: 10px 10% 0;
-    border: 1px solid #B3811A;
-    background-color: rgba(17,30,43,0.5);
-    -webkit-transition: 0.2s; /* Chrome, Safari */
-    -moz-transition: 0.2s; /* Firefox */
-    -o-transition: 0.2s; /* Opera */
-    transition: 0.2s;
-    } 
+#projects .tab h2:after{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: " ";    
+}
 
-#projects .tab a:hover {
-    background-color: #B3811A;
-    }
-
-#projects .sub-title {
-    border-bottom: none;
-    } 
-
-#projects .tab a .icon-small {
-        margin: 0 2.5%;
-    }
-
-.tab:nth-child(1) a .icon-small{
-    background-size: 80%;
-    background-image: url('../../assets/images/ArchIcon.png')}
-.tab:nth-child(2) a .icon-small{
-    background-image: url('../../assets/images/RenderIcon.png')}
-.tab:nth-child(3) a .icon-small{
-    background-image: url('../../assets/images/DigitalIcon.png')}
+#projects .tab:nth-child(1) h2:after{
+    background-image: url('../../assets/images/ArchIcon.png');}
+#projects .tab:nth-child(2) h2:after{
+    background-image: url('../../assets/images/RenderIcon.png');}
+#projects .tab:nth-child(3) h2:after{
+    background-image: url('../../assets/images/DigitalIcon.png');
+}
 
 #projects .button-read-more{
     display: none;
@@ -185,15 +166,10 @@
 
 /* === Tablet === */
 @media only screen and (min-width: 800px) {
-    #projects .tab a  { 
-        height: 3vh;
-        margin: 0 5%;
-    }
-    
-    #projects .tab a .icon-small {
-        margin: 0 2.5%;
-        width: 15px;
-        height: 15px;
+    #projects .tab h2:after{
+        width: 10px;
+        height: 10px;
+        margin: 0 .5vw;  
     }
     
     #projects .button-read-more{
@@ -203,20 +179,9 @@
 
 /* === Desktop === */
 @media only screen and (min-width: 1600px){
-    #projects .tab a  { 
-        height: 3vh;
-        max-height: none;
-        margin: 5% 5% 0;
-    }
-    
-    #projects .tab a:active {
-        margin: 5% 15% 0;
-    }
-    
-    #projects .tab a .icon-small {
-        margin: 0 2.5%;
-        width: 1vw;
-        height: 1vw;
+    #projects .tab h2:after{
+        width: .85vw;
+        height: .85vw;  
     }
 }
 
@@ -224,7 +189,7 @@
 /* === Mobile preview === */
 #gallery{
     display: grid;
-    grid-template-rows: repeat(4, 25vh);
+    grid-template-rows: repeat(4, 30vh);
     grid-gap: 10px;
     position: relative;
     margin: 5% 10px;
@@ -370,7 +335,7 @@
 }
 
 .blog-img-container{
-    height: 25vh;
+    height: 30vh;
     max-height: 225px;
     content: '';
     background-size: cover;
@@ -461,6 +426,7 @@
     }
     
     .blog-img-container{
+        height: 25vh;
         border: none;
         border-bottom: 1px solid #B3811A;
         box-shadow: inset 0 0 50px rgba(17,30,43,0.4);

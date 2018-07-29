@@ -271,6 +271,7 @@ input, textarea{
     
     .sub-title {
         font-size: 75%;
+        line-height: 150%;
         text-transform: uppercase;
     } 
     
@@ -326,6 +327,7 @@ input, textarea{
     
     .sub-title {
         font-size: 120%;
+        line-height: 175%;
     }
     
     .body-text, .today, input, textarea {
@@ -346,7 +348,7 @@ input, textarea{
 
     .info {
         font-size: 125%;
-        font-weight: 600;
+/*        font-weight: 600;*/
     }
     
     .button-read-more{
